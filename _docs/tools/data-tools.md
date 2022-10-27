@@ -11,8 +11,10 @@ Import data only for your current agency. You can change agencies using the **Cu
 ![Current Agency Box]({{ site.baseurl }}/assets/images/docs/current-agency.PNG)
 
 - **Import Type**: What type of data are you importing? Only one selection is possible.
-- **File**: Choose the file to upload from your desktop. Note that the file must be one of Microsoft Excel (x.xls), OpenDocument Spreadsheet (x.ods), Comma Separated Values (x.csv), or HTML (x.html)
-  - Note that the file must follow the import rules outlined to the box on the side for the specific _Import Type_ being used in order for the import to be successful.
+- **File**: Choose the file to upload from your desktop. Note that the file must be one of Microsoft Excel (.xls or .xlsx) or Comma Separated Values (.csv).
+  - Note that the file must follow the import rules for the specific _Import Type_ being used in order for the import to be successful. Import specifications can be found by following the links in the information panel below.
+
+  ![Bulletin Board Notes]({{ site.baseurl }}/assets/images/docs/info-panel.png)
 
 ## Export Data
 
