@@ -12,10 +12,18 @@ Import data only for your current agency. You can change agencies using the **Cu
 
 - **Import Type**: What type of data are you importing? Only one selection is possible.
 - **File**: Choose the file to upload from your desktop. Note that the file must be one of Microsoft Excel (.xls or .xlsx) or Comma Separated Values (.csv).
-  - Note that the file must follow the import rules for the specific _Import Type_ being used in order for the import to be successful. Import specifications can be found by following the links in the information panel below.
+  - Note that the file must follow the import rules for the specific _Import Type_ being used in order for the import to be successful. Import specifications can be found by following the links below.
 
-  ![Bulletin Board Notes]({{ site.baseurl }}/assets/images/docs/info-panel.png)
+> ### General Import Specifications
+>  - [Rules governing the structures and formats of the various import types.](https://gateway.vectorsurv.org/doc/ImportDataSpecification.xlsx)
+> ### Arthro Collections - Formatted Specifications
+> **Specifications and template files specific to the Arthro Collection - Formatted import type.**
+> - [Generic Sample](https://gateway.vectorsurv.org//doc/arthro_collection_formatted/generic/generic.zip)
+> - [California Sample](https://gateway.vectorsurv.org//doc/arthro_collection_formatted/CA/CA.zip)
+> ### Web Service Documentation
+> - [Instructions detailing the Import Web service and how to use the service from local applications.](https://trac.vectorsurv.org/gateway/wiki/ImportWebService)
 
+These links can also be found in the information panel at the bottom of the [Data Import page](https://gateway.vectorsurv.org/core/ppf/import).
 ## Export Data
 
 Select the **Export Type** to choose which data you wish to export. Export format preferences can be modified under _Documents_ on the [Account Preferences]({{ site.baseurl }}/docs/settings/account-preferences) page.
