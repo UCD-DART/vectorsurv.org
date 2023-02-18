@@ -2,9 +2,9 @@
 
 Welcome to the Vectorborne Disease Surveillance System, known as VectorSurv.
 
-VectorSurv is a web-based platform for data management and analysis that is used by vector control and public health agencies in the U.S. The system was initiated in 2006 as a partnership of the Mosquito and Vector Control Association of California, representing more than 60 local mosquito and vector control agencies in California; the California Department of Public Health; and the Davis Arbovirus Research and Training (DART) Lab at the University of California, Davis.
+VectorSurv is a web-based platform for data management and analysis that is used by vector control and public health agencies in the U.S. 
 
-Beginning in 2017, VectorSurv has expanded to include other states, and the system now serves a growing number of U.S. states and US-Affiliated Pacific Islands (see list below).
+removed timeline on here - will add an about page 
 
 Much of the data in VectorSurv can be visualized on our mapping website, **VectorSurv Maps** ([https://maps.vectorsurv.org](https://maps.vectorsurv.org)). This website shows past and present results of surveillance for arboviruses, including West Nile virus and St. Louis encephalitis virus, and the spread of the invasive mosquitoes, Aedes aegypti, Aedes albopictus, and Aedes notoscriptus.
 
