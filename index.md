@@ -1,10 +1,7 @@
 ![VectorSurv Logo](vectorsurv_logo.png)
 
-Welcome to the Vectorborne Disease Surveillance System, known as VectorSurv.
-
 VectorSurv is a web-based platform for data management and analysis that is used by vector control and public health agencies in the U.S. 
 
-removed timeline on here - will add an about page 
 
 Much of the data in VectorSurv can be visualized on our mapping website, **VectorSurv Maps** ([https://maps.vectorsurv.org](https://maps.vectorsurv.org)). This website shows past and present results of surveillance for arboviruses, including West Nile virus and St. Louis encephalitis virus, and the spread of the invasive mosquitoes, Aedes aegypti, Aedes albopictus, and Aedes notoscriptus.
 
