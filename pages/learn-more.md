@@ -1,0 +1,1 @@
+Higher-level aggregate reporting functions are managed by states, including reporting to CDC's ArboNet national database

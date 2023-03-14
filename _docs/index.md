@@ -3,7 +3,7 @@ title: Documentation
 permalink: /docs/
 ---
 
-This page provides documentation to accompany the webpages found on the VectorSurv Gateway. The VectorSurv Gateway pages are linked to the corresponding documentation. Users may also browse the information using the links to the right.
+<h4>This page provides documentation to accompany the webpages found on the VectorSurv Gateway. The VectorSurv Gateway pages are linked to the corresponding documentation. Users may also browse the information using the links to the right.</h4><br>
 
 ### Table of Contents
 
