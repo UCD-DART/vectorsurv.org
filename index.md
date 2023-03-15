@@ -183,6 +183,14 @@
                 </p>
             </details>
             <details>
+                <summary>Oklahoma</summary>
+                <p>
+                <li>
+                    <a href="https://oklahoma.gov/health/health-education/acute-disease-service/disease-information/tickborne-and-mosquitoborne-diseases.html" target="_blank">Oklahoma State Department of Health</a>
+                </li>
+                </p>
+            </details>
+            <details>
                 <summary>South Dakota</summary>
                 <p>
                 <li>
@@ -195,6 +203,22 @@
                 <p>
                 <li>
                     <a href="https://www.health.nd.gov/wnv/west-nile-virus-about" target="_blank">North Dakota Department of Health</a>
+                </li>
+                </p>
+            </details>
+            <details>
+                <summary>Idaho</summary>
+                <p>
+                <li>
+                    <a href="http://gcmad.org" target="_blank">Gem County Mosquito Abatement District</a>
+                </li>
+                </p>
+            </details>
+            <details>
+                <summary>Wyoming</summary>
+                <p>
+                <li>
+                    <a href="https://tcweed.org" target="_blank">Teton County Weed and Pest District</a>
                 </li>
                 </p>
             </details>
