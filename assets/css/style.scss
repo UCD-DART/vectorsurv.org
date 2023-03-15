@@ -1,6 +1,3 @@
----
----
-
 @import "base.scss";
 
 @import "logo.scss";
@@ -751,7 +748,7 @@ section.content .gatsby-highlight + h4::before{
 
 @media (min-width: 2000px) {
   .main .wrap-inner{
-      max-width:840px;
+      // max-width:840px;
       margin-left: auto;
       margin-right: auto;
   }
