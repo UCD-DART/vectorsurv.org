@@ -5,7 +5,7 @@ permalink: /docs/
 
 <div class="grid-container3">
     <div class= "box3">
-        <h1>  Documentation:
+        <h1>  Documentation
         </h1>
     </div>
 </div>
