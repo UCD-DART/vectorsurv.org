@@ -129,9 +129,7 @@
                 <li>
                     <a href="https://vectorbio.rutgers.edu/reports/mosquito/" target="_blank">New Jersey Adult Mosquito Surveillance Reports</a>
                 </li>
-                <li>
-                    <a href="https://www.mvcac.org/" target="_blank">Mosquito and Vector Control Association of California</a>
-                </li>
+      
                 </p>
             </details>
             <details>
