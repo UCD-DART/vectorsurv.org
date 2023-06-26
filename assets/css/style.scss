@@ -988,6 +988,26 @@ section.content .gatsby-highlight + h4::before{
   }
 }
 
+@media (min-width: 600px) {
+  .sidebar .sidebar-wrap-outer{
+      padding-bottom: 13vh;
+      position:fixed;
+      z-index: 2;
+      height: 100vh;
+      overflow-y: scroll;
+      -webkit-overflow-scrolling: touch;
+      // margin-right: -900px;
+      padding-right: 1.5rem;
+      background-color: lightgray;
+      color:#003366;
+      opacity: 1 !important;
+      padding-top:1rem;
+      padding-left:1rem;
+      right:0;
+      width:20%;
+  }
+}
+
 @media (max-width: 599px) {
   .sidebar .sidebar-wrap-outer{
       padding-bottom: 10vh;
