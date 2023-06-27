@@ -950,12 +950,6 @@ section.content .gatsby-highlight + h4::before{
 //   }
 // }
 
-// @media (min-width: 780px) and (max-width: 1279px) {
-//   .sidebar .sidebar-wrap-inner{
-//       margin-top:50px;
-//   }
-// }
-
 @media (min-width: 600px) {
   .sidebar .sidebar-wrap-inner{
       transform:none !important;
@@ -966,6 +960,7 @@ section.content .gatsby-highlight + h4::before{
 .sidebar .sidebar-wrap-outer{
   padding-top:0;
 }
+
 
 @media (min-width: 600px) {
   .sidebar .sidebar-wrap-outer{
