@@ -5,10 +5,10 @@ gateway-url: https://gateway.vectorsurv.org/arthro/ppf/pool_infection_calc
 
 The pool infection rate calculator estimates the arbovirus infection rate based on testing pools of mosquitoes. This calculator is based on the [CDC/DVBID MLE/MIR Microsoft Excel add-in](https://www.cdc.gov/westnile/resourcepages/mosqSurvSoft.html).
 
-## Field
+## Fields
 
 - **Agency**: Choose the agency or agencies for which you wish to calculate an infection rate. Multiple agencies can be selected by using the _CTRL/CMD/SHIFT_ keys while selecting values. This could be your own agency to compare the current year to past years, or more than one agency to compare to neighboring districts. If the _Treat each selected agency independently_ box is checked, the rate will be stratified by agency (ignored if only one agency is selected). If left unchecked, the infection rate will be aggregated for all selected agencies.
-
+- **Peer Agency**: In addition to calculations for your own agency (the default), this selection allows you to choose other agencies for which you wish to calculate an infection rate. Multiple agencies can be selected by using the _CTRL/CMD_, or _SHIFT_ keys while selecting values. This allows you to compare results for your agency to those of neighboring agencies. Note that calculations for other agencies are possible only for the the entire agency. If the _Treat each selected agency independently_ box is checked, the rates will be calculated separately for each agency (ignored if only one agency is selected). If left unchecked, the infection rate will be aggregated for all selected agencies.
 
 - **Date Period**: Specify the time period for which you wish to calculate an infection rate. You can manually select a date range with the date format specified on the [Account Preferences]({{ site.baseur1 }}/docs/settings/account-preferences) page or choose a specific week or month in a year. If calculating for a month, there is a box to specify whether to use half-months instead of full-months. If this box is checked, each month will be divided into two parts, days 1-15 and days 16 to the last day of the month (28, 29, 30, or 31), and _only_ the second half of the month will be calculated.
   ![Date period field]({{ site.baseur1 }}/assets/images/docs/date-range-infection-rate.PNG)
