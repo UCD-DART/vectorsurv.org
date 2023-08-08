@@ -20,9 +20,12 @@ The pool infection rate calculator estimates the arbovirus infection rate based 
 - **Trap Type**: Filter the results by the trap type used for the collection. This is helpful to ensure that results are comparable over time and/or across agencies. Similar to **Sex/Condition**, multiple trap types can be selected by using the _CTRL/CMD/SHIFT_ keys while selecting values, and checking the _Treat each selected trap type individually_ box will stratify the infection rate by the selected traps.
 - **Point Estimate**: The infection rate estimation method. The bias-corrected MLE will be appropriate for most situations, but you can also choose to use the MLE or MIR methods.
 
-  True infection rate is calculated as $$\text{True IR} = \frac{\text{Infected Arthropods}}{\text{Total arthropods in pool}}*1000$$
+  True infection rate is calculated as 
+  $$
+  \text{True IR} = \frac{\text{Infected Arthropods}}{\text{Total arthropods in pool}}*1000
+  $$
 
-   In most cases, arthropods are not tested for diseases individually and the actual number of disease positive arthropods in a positive pool remains unknown. Fortunately, infection rates can be estimated using the following methods.  
+   In most cases, arthropods are not tested for diseases individually and the actual number of disease positive arthropods in a positive pool remains unknown. Fortunately, infection rates can be estimated using the following methods: 
     <br>
   - **MIR**: Minimum Infection Rate makes the assumptions that there is only one positive mosquito in an infected pool of at least 1000 arthropods. MIR is not always a reliable estimate of IR as it is possible for multiple positive arthropods to be present in a positive pool and pools often contain fewer
 $$\text{MIR} =  \frac{\text{Number Positive Pools}} {\text{Total Number Individuals}}  * 1000$$
