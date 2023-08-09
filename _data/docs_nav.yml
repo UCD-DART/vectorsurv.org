@@ -88,5 +88,5 @@
         - link: /docs/settings/tokens/
 - title: Bulletin Board
   link: /docs/bulletin_board/
-# - title: API
-#   link: http://
+- title: API
+  link: https://docs.api.vectorsurv.org/
