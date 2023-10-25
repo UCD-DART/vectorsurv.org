@@ -15,6 +15,7 @@ permalink: /resources/
         </div>
         <div class="grid-container">
             <div class="box">
+
                     <h2> 
                         Creating Reports in R Workshop: 
                     </h2>
@@ -34,4 +35,4 @@ permalink: /resources/
                     <img src="/assets/images/sample_report.png" alt="Sample report">
             </div>
         </div>
-                    
+
