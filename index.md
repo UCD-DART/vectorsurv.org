@@ -71,14 +71,14 @@
         <figure>
           <img src="/assets/images/mapicon.png" alt="icon of map of US">
         </figure>
-        <h2> 20 </h2>
+        <h2> 21 </h2>
         <h3> states and territories </h3>
     </div>
     <div class= "box3">
         <figure>
           <img src="/assets/images/enterprise.png" alt="icon of agency">
         </figure>
-        <h2> 220+ </h2>
+        <h2> 225+ </h2>
         <h3> agencies </h3>
     </div>
     <div class= "box3">
@@ -146,6 +146,14 @@
                 <p>
                 <li>
                     <a href="https://healthandwelfare.idaho.gov/health-wellness/diseases-conditions/west-nile-virus" target="_blank">Idaho Department of Health & Welfare: West Nile Virus</a>
+                </li>
+                </p>
+            </details>
+            <details>
+                <summary>Kentucky</summary>
+                <p>
+                <li>
+                    <a href="https://www.chfs.ky.gov/agencies/dph/dehp/idb/Pages/tick-borne.aspx" target=blank>Kentucky Cabinet for Health and Family Services: Tickborne Diseases</a>
                 </li>
                 </p>
             </details>
