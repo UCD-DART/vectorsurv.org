@@ -13,8 +13,10 @@ This tool will extract long/lat coordinates from an address typed into the **Loc
 
 Saved spatial features are useful for filtering within an agency for output/export files. Get started by clicking on "New Feature", then "Add Polygon". Click on the map to add as many vertices as necessary. Name the feature and tick the boxes for the appropriate sharing settings. You can save the feature by clicking on "Save Feature" or "Save Feature As" to use it for data visualization.
 
-You can also directly import features saved from another mapping software using the boxes to the right. A public layer indicates that these boundaries can be shown on [public-facing maps](https://maps.vectorsurv.org).
+You can also directly import features saved from another mapping software using the boxes to the right. A public layer indicates that these boundaries can be shown on future [public-facing maps](https://maps.vectorsurv.org).
 ![Spatial features boxes]({{ site.baseur1 }}/assets/images/docs/spatial-features-boxes.PNG)
+
+If you are looking to add or update the primary spatial representation of your agency's boundaries as appears on the [public-facing maps](https://maps.vectorsurv.org), contact the VectorSurv team directly at [help@vectorsurv.org](mailto:help@vectorsurv.org).
 
 ## VectorSurv Maps
 
