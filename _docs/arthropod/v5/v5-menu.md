@@ -17,10 +17,10 @@ View and edit saved abundance records.
 
 ## Pools
 
-### [New Pools]({{ site.baseurl }}/docs/arthropod/pool)
+### [New Pools]({{ site.baseurl }}/docs/arthropod/v5/pool)
 
 Pool submissions are records of groups of mosquitoes sent to be tested for arboviruses.
 
-### [Pool Management]({{ site.baseurl }}/docs/arthropod/pool-manage)
+### [Pool Management]({{ site.baseurl }}/docs/arthropod/v5/pool-manage)
 
 View and edit saved pools.

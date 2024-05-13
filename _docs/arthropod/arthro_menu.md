@@ -13,7 +13,7 @@ Configure settings for arthropod abundance pages to fit your agency’s specific
 
 Enter and manage collections and link to tools relating to arthopod abundance.
 
-### [Pools]({{ site.baseur1 }}/docs/arthropod/pools-menu)
+### [Pools]({{ site.baseur1 }}/docs/arthropod/pools_menu)
 
 Enter and manage pools and arbovirus testing results.
 
