@@ -8,7 +8,6 @@
     </div>
 </div>
 
-
   <section class="breweries" id="breweries">
     <ml>
       <li>
@@ -71,14 +70,14 @@
         <figure>
           <img src="/assets/images/mapicon.png" alt="icon of map of US">
         </figure>
-        <h2> 21 </h2>
+        <h2> 27 </h2>
         <h3> states and territories </h3>
     </div>
     <div class= "box3">
         <figure>
           <img src="/assets/images/enterprise.png" alt="icon of agency">
         </figure>
-        <h2> 225+ </h2>
+        <h2> 239+ </h2>
         <h3> agencies </h3>
     </div>
     <div class= "box3">
@@ -172,7 +171,23 @@
                     <a href="https://dhhs.ne.gov/Pages/West-Nile-Virus-Data.aspx" target="_blank">Nebraska Department of Health and Human Services</a>
                 </li>
                 </p>
-            </details>            
+            </details>           
+             <details>
+                <summary>Nevada</summary>
+                <p>
+                <li>
+                    <a href="https://dhhs.nv.gov/" target="_blank">Nevada Department of Health and Human Services</a>
+                </li>
+                </p>
+            </details>
+            <details>
+                <summary>New Hampshire</summary>
+                <p>
+                <li>
+                    <a href="https://www.dhhs.nh.gov/" target="_blank">New Hampshire Department of Health and Human Services</a>
+                </li>
+                </p>
+            </details> 
             <details>
                 <summary>New Jersey</summary>
                 <p>
@@ -252,6 +267,14 @@
                 </p>
             </details>
             <details>
+                <summary>Texas</summary>
+                <p>
+                <li>
+                    <a href="https://www.dshs.texas.gov/" target="_blank">Texas Department of State Health Services</a>
+                </li>
+                </p>
+            </details>
+            <details>
                 <summary>US-Affiliated Pacific Islands</summary>
                 <p>
                 <li>
@@ -282,6 +305,14 @@
                 </li>
                 <li>
                     <a href="https://www.umaa.org/" target="_blank">Utah Mosquito Abatement Association</a>
+                </li>
+                </p>
+            </details>
+            <details>
+                <summary>Virgina</summary>
+                <p>
+                <li>
+                    <a href="https://www.vdh.virginia.gov/" target="_blank">Virginia Department of Health</a>
                 </li>
                 </p>
             </details>
