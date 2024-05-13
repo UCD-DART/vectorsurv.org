@@ -3,7 +3,7 @@ title: Abundance
 gateway-url: https://gateway.vectorsurv.org/core/ppf/menu/path/42
 ---
 
-Abundance menu
+## Abundance menu
 
 ### [New Collection]({{ site.baseurl }}/docs/arthropod/collection)
 

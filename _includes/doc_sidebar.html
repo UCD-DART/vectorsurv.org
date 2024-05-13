@@ -6,13 +6,16 @@
           <div>
             {% for section in site.data.docs_nav %} {% assign p = site.documents
             | where: "url", section.link | first %}
-            <h4 class="container">
+            <h4 class="container sidebar-section">
               {%- if section.link %}
-              <a href="{{ p.url }}"
+              <a href="{{ p.url }}" class="item"
                 >{%- if page.url == p.url %} <span class="current"></span> {%-
                 endif %} {%- endif %}{{ section.title }}{%- if section.link %}
               </a>
               {%- endif %}
+              {% if section.docs.size > 0 %}
+              <button class="collapse-button" onclick="toggleCollapse(this)">-</button>
+              {% endif %}
             </h4>
             <ul>
               {% for item in section.docs %} {% assign p = site.documents |
@@ -22,6 +25,9 @@
                   {%- if page.url == p.url %}<span class="current"></span>{%-
                   endif %} {{ p.menu_name | default: p.title }}
                 </a>
+                {% if p.v5 %}
+                <div class="v5-badge">v5</div>
+                {% endif %}
                 <ul class="innerNav">
                   {% for item2 in item.docs %} {% assign p = site.documents |
                   where: "url", item2.link | first %}
@@ -30,6 +36,9 @@
                       {%- if page.url == p.url %}<span class="current"></span
                       >{%- endif %} {{ p.menu_name | default: p.title }}
                     </a>
+                    {% if p.v5 %}
+                    <div class="v5-badge">v5</div>
+                    {% endif %}
                   </li>
                     {% endfor %}
                 </ul>
@@ -44,3 +53,17 @@
     {% include menu_button.html %}
   </div>
 </div>
+
+<script>
+ function toggleCollapse(button) {
+  var ulElement = button.parentNode.nextElementSibling;
+  if (ulElement.style.display === 'none') {
+    ulElement.style.display = 'block';
+    button.textContent = '-';
+  } else {
+    ulElement.style.display = 'none';
+    button.textContent = '+';
+  }
+}
+
+</script>

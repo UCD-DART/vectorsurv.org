@@ -18,7 +18,10 @@ permalink: /docs/
             <a class="linkclass" href="https://vectorsurv.org/docs/site/site-menu/">Sites</a>
         </li>
         <li>
-            <a class="linkclass" href="https://vectorsurv.org/docs/arthropod/arthro_menu/">Arthropod</a>
+            <a class="linkclass" href="https://vectorsurv.org/docs/arthropod/arthro-menu/">Arthropod</a>
+        </li>
+        <li>
+            <a class="linkclass" href="https://vectorsurv.org/docs/tick/tick-menu/">Tick</a>
         </li>
         <li>
             <a class="linkclass" href="https://vectorsurv.org/docs/sentinel/sentinel-menu/">Sentinel</a>

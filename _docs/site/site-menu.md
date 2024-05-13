@@ -16,3 +16,7 @@ View and edit saved sites.
 ### [Site Groups]({{ site.baseur1 }}/docs/site/site-group)
 
 Organize trap sites that are commonly analyzed together.
+
+### [Site Forms in v5]({{ site.baseurl }}/docs/site/v5/site-menu)
+
+View documentation for v5 version of forms.

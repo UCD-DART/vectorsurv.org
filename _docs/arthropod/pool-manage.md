@@ -1,6 +1,6 @@
 ---
 title: Pool Management
-gateway-url: https://gateway.vectorsurv.org/arthro/ppf/pool_manage
+gateway-url: https://gateway.vectorsurv.org/arthro/ppf/pool-manage
 ---
 
 View and edit saved pools.
