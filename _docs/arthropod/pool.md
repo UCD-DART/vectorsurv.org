@@ -1,6 +1,7 @@
 ---
 title: New Pools
 gateway-url: https://gateway.vectorsurv.org/arthro/ppf/pool
+youtube-url: https://youtu.be/cZAveMzkIvU
 ---
 
 Pool submissions are records of groups of mosquitoes sent to be tested for arboviruses.

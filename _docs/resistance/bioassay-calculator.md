@@ -1,6 +1,7 @@
 ---
 title: Bottle Bioassay Calculator
 gateway-url: https://gateway.vectorsurv.org/resistance/ppf/bottle_calc
+youtube-url: https://youtu.be/8pVD4aMW084
 ---
 Estimate survival curves from bottle bioassay results.
 

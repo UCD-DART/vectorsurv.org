@@ -160,7 +160,7 @@
                 <summary>Louisiana</summary>
                 <p>
                 <li>
-                    <a href="https://ldh.la.gov/" target="_blank">Louisiana Department of Health</a>
+                    <a href="https://ldh.la.gov/page/parasitic-vectorborne-diseases" target="_blank">Louisiana Department of Health</a>
                 </li>
                 </p>
             </details>
@@ -176,7 +176,7 @@
                 <summary>Nevada</summary>
                 <p>
                 <li>
-                    <a href="https://dhhs.nv.gov/" target="_blank">Nevada Department of Health and Human Services</a>
+                    <a href="https://www.nnph.org/programs-and-services/environmental-health/vector-borne-diseases/index.php" target="_blank">Nevada Department of Health and Human Services</a>
                 </li>
                 </p>
             </details>
@@ -184,7 +184,7 @@
                 <summary>New Hampshire</summary>
                 <p>
                 <li>
-                    <a href="https://www.dhhs.nh.gov/" target="_blank">New Hampshire Department of Health and Human Services</a>
+                    <a href="https://www.dhhs.nh.gov/programs-services/disease-prevention/infectious-disease-control/mosquito-borne-illnesses" target="_blank">New Hampshire Department of Health and Human Services</a>
                 </li>
                 </p>
             </details> 
@@ -246,7 +246,7 @@
                 <summary>Oregon</summary>
                 <p>
                 <li>
-                    <a href="https://www.oregon.gov/oha/ph/pages/index.aspx" target="_blank">Oregon Health Authority Public Health Division</a>
+                    <a href="https://www.oregon.gov/oha/ph/diseasesconditions/diseasesaz/westnilevirus/pages/wnile.aspx" target="_blank">Oregon Health Authority Public Health Division</a>
                 </li>
                 </p>
             </details>
@@ -270,7 +270,7 @@
                 <summary>Texas</summary>
                 <p>
                 <li>
-                    <a href="https://www.dshs.texas.gov/" target="_blank">Texas Department of State Health Services</a>
+                    <a href="https://www.dshs.texas.gov/mosquito-borne-diseases" target="_blank">Texas Department of State Health Services</a>
                 </li>
                 </p>
             </details>
@@ -312,7 +312,7 @@
                 <summary>Virgina</summary>
                 <p>
                 <li>
-                    <a href="https://www.vdh.virginia.gov/" target="_blank">Virginia Department of Health</a>
+                    <a href="https://www.vdh.virginia.gov/environmental-epidemiology/bugs-human-health/" target="_blank">Virginia Department of Health</a>
                 </li>
                 </p>
             </details>

@@ -2,6 +2,7 @@
 title: New Pools
 v5: true
 gateway-url: https://gateway.vectorsurv.org/v5/tick/pool/pool
+youtube-url: https://youtu.be/9G_-T5stgHk
 ---
 
 Pool submissions are records of groups of ticks sent to be tested for

@@ -2,6 +2,11 @@
 title: New Site
 v5: true
 gateway-url: https://gateway.vectorsurv.org/v5/site/site
+additional-resources:
+  - url: https://youtu.be/inN0GJoHGyw
+    name: Video Tutorial
+  - url: https://www.vectorsurv.org/docs/site/v5/walkthroughs/
+    name: Walkthrough Guides
 ---
 
 Sites represent trap locations. They will help you quickly record

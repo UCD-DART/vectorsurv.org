@@ -1,13 +1,14 @@
 ---
 title: Risk Assessment
 gateway-url: https://gateway.vectorsurv.org/core/ppf/risk_assessment_calc
+youtube-url: https://youtu.be/MqDhD2tZ7s8
 ---
 
 This calculator is based upon the Risk Assessment model found in the [California Mosquito-borne Virus Surveillance and Response Plan](http://westnile.ca.gov/resources.php). The environmental component (temperature and precipitation) of this calculator uses daily meteorological surfaces generated from the [North American Land Data Assimilation System (NLDAS)](https://ldas.gsfc.nasa.gov/nldas) provided by [NASA Goddard Space Flight Center](https://www.nasa.gov/goddard). The infection rate component of this calculator is based upon the [CDC/DVBID MLE/MIR MS Excel add-in](https://www.cdc.gov/westnile/resourcepages/mosqSurvSoft.html).
 
 ## Fields
 
-- **Peer Agency**: Your agency is automatically selected. You may choose any additional peer agencies for which you wish to calculate a risk assessment. This can be used to compare your data to neighboring districts. Multiple peer agencies can be selected by using the _CTRL/CMD/SHIFT_ keys while selecting values. If the _Treat each selected agency independently_ box is checked, the risk assessment will be stratified by agency (this is ignored if only one agency is selected). If left unchecked, the abundance anomaly will be aggregated for all selected peer agencies. Your agency will always be treated separately. 
+- **Peer Agency**: Your agency is automatically selected. You may choose any additional peer agencies for which you wish to calculate a risk assessment. This can be used to compare your data to neighboring districts. Multiple peer agencies can be selected by using the _CTRL/CMD/SHIFT_ keys while selecting values. If the _Treat each selected agency independently_ box is checked, the risk assessment will be stratified by agency (this is ignored if only one agency is selected). If left unchecked, the abundance anomaly will be aggregated for all selected peer agencies. Your agency will always be treated separately.
 - **Peer Agency**: These are agencies whose information you do not have access to. Any calculations run for these agencies are done at the agency-level, so any spatial filters will be ignored.
 - **Year**: This is the year for which you wish to calculate a risk assessment. When calculating the [abundance anomaly]({{ site.baseur1 }}/docs/tools/calculators/anomaly) component, this year's abundance at the desired time interval will be compared to the average abundance from the previous 5 years.
 - **Time Interval**: How frequently should the risk assessment components be calculated? There are several built-in options, or you can manually specify a date range within the selected year. Date format is based on the settings under [Account Preferences]({{ site.baseurl }}/docs/settings/account-preferences).

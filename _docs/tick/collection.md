@@ -2,6 +2,7 @@
 title: New Collection
 v5: true
 gateway-url: https://gateway.vectorsurv.org/v5/ticks/collection/collection
+youtube-url: https://youtu.be/9G_-T5stgHk
 ---
 
 Collections are the records of tick population data through manual

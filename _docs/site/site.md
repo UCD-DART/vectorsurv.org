@@ -2,6 +2,7 @@
 title: New Site
 permalink: /docs/site/
 gateway-url: https://gateway.vectorsurv.org/site/ppf/site
+youtube-url: https://youtu.be/bzFMqI900KI
 ---
 Sites are essentially bookmarks for trap locations. They will help you quickly record collection events and pool tests without having to locate them on a map or type in coordinates each time.
 

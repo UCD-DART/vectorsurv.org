@@ -1,6 +1,7 @@
 ---
 title: New Application
 gateway-url: https://gateway.vectorsurv.org/application/ppf/application
+youtube-url: https://youtu.be/TZ1xWlObdhc
 ---
 Use this page to keep track of pesticide applications conducted by your agency.
 

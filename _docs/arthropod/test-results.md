@@ -1,6 +1,7 @@
 ---
 title: New Results
 gateway-url: https://gateway.vectorsurv.org/arthro/ppf/pool_test_add
+youtube-url: https://youtu.be/qNf_VHVOCJM
 ---
 The form for submitting both positive and negative pool test results.
 

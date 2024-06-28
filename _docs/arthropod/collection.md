@@ -1,6 +1,7 @@
 ---
 title: New Collection
 gateway-url: https://gateway.vectorsurv.org/arthro/ppf/collection
+youtube-url: https://youtu.be/cZAveMzkIvU
 ---
 
 Collections are the records of arthropod population data through the placement of traps.
@@ -11,7 +12,7 @@ Collections are the records of arthropod population data through the placement o
 - **Lure Type**: The types of lure(s) used with the trap if any. Multiple values can be selected by using _CTRL/CMD/SHIFT_ keys while selecting values. _Unspecified_ and _None_ can only be selected individually.
 - **Collection Date**: The date the trap was picked up. If a trap was left for multiple nights, enter the last day the trap was in the field. Date format is based on the settings under [Account Preferences]({{ site.baseurl }}/docs/settings/account-preferences). A date needs to be selected before you can choose at trap site.
 - **# of Traps**: The number of unique traps in operation at one site.
-- **# of Nights/Trap**: The number of nights a trap was in the field. If a trap was placed and collected in the same day, enter 0. If a trap was placed and collected the next day, enter 1.
+- **# of Nights/Trap**: The number of nights a trap was in the field. Minimum of 1. If a trap was placed and collected in the same day, enter 1. If a trap was placed and collected the next day, enter 1.
 - **Trap(s) at Site**: The [site]({{ site.baseurl }}/docs/site/) where a trap was placed. Start typing in any part of the site code or name and the dropdown will filter the sites to that text. Once a site is selected, the trap can be adjusted up to 400m away indicated by the circle.  
   ![Collection Site Map]({{ site.baseurl }}/assets/images/docs/collection_site_radius.png)  
   If a collection is made at a location that is not a normal trapping location, the 0 site code (length varies based on state settings) can be used for a 1 time trapping event. Select the 0 code and the marker on the map can be moved or geolocated to any location.

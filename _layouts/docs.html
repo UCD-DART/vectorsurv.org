@@ -29,6 +29,24 @@ layout: defaultdocs
       <h4>
         Gateway URL: <a href="{{ page.gateway-url }}">{{ page.gateway-url }}</a>
       </h4>
+      {% if page.youtube-url %}
+      <h4>
+        Video Tutorial:
+        <a href="{{ page.youtube-url }}">{{ page.youtube-url }}</a>
+      </h4>
+      {% endif %}
+    </div>
+    {% endif %}
+    
+    {% if page.additional-resources %}
+    <div class="gateway-url additional-resources">
+      <h4>Additional Resources:</h4>
+      {% for resource in page.additional-resources %}
+      <p>
+        - {{ resource.name }}:
+        <a href="{{ resource.url }}">{{ resource.url }}</a>
+      </p>
+      {% endfor %}
     </div>
     {% endif %}
 

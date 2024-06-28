@@ -2,6 +2,7 @@
 title: New Pools
 v5: true
 gateway-url: https://gateway.vectorsurv.org/v5/mosquito/pool/pool
+youtube-url: https://youtu.be/qeGHkn215jQ
 ---
 
 Pool submissions are records of groups of mosquitoes sent to be tested

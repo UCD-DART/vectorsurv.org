@@ -1,6 +1,7 @@
 ---
 title: Config
 gateway-url: https://gateway.vectorsurv.org/core/ppf/menu/path/39
+youtube-url: https://youtu.be/Ad_BxPdyuFw
 ---
 
 Configure settings for arthropod abundance pages to fit your agency's specifications.
