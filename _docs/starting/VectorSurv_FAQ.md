@@ -2,6 +2,7 @@
 title: "VectorSurv Starting Guide"
 permalink: /starting/
 ---
+
 - [Starting with VectorSurv as a New Agency](#StartingOnVectorSurvAgency)
 
 - [Starting with VectorSurv as a New User for an Existing Agency](#StartingOnVectorSurvUser)
@@ -102,7 +103,7 @@ In addition to adding data values directly through the VectorSurv Gateway user i
 
 **Excel (.xls) or CSV (.csv) File Imports:**
 
-Newly collected and historic data not yet entered to VectorSurv can be imported to the VectorSurv Gateway through the use of Excel (.xls) or CSV (.csv) files formatted to match VectorSurv's data structure. The data formats required to import new data using Excel (.xls) or CSV (.csv) files can be found within VectorSurv's data import specifications file (<https://gateway.vectorsurv.org/doc/ImportDataSpecification.xlsx>).
+Newly collected and historic data not yet entered to VectorSurv can be imported to the VectorSurv Gateway through the use of Excel (.xls) or CSV (.csv) files formatted to match VectorSurv's data structure. The data formats required to import new data using Excel (.xls) or CSV (.csv) files can be found within VectorSurv's data import specifications file (<https://ucdavis.app.box.com/v/VS-Gateway-Import-Specs>).
 
 Once the Excel (.xls) or CSV (.csv) file is correctly formatted for import, users can import files by navigating to [Tools] > [Data Tools] > [Data Import].
 
