@@ -13,9 +13,9 @@ After logging into the Vectorsurv Gateway, users will see a bulletin board conta
 
 - **Changelog**: This is a record of notable changes made to the Vectorsurv Gateway over time. It includes records of changes such as bug fixes, new features, etc. The list is chronologically ordered with the latest changes at the top of the page. The changelog is visible to all Gateway users.
 
-- **Agency**: This note type is available to make agency-wide announcements within each local agency. Agency notes can be created and edited by the agency managers defined for the agency, and once created, they will be seen by all users within that agency.
+- **Agency**: This note type is available to make agency-wide announcements within each local agency. Agency notes can be created and edited by the agency managers defined for the agency, and once created, they are visible to all users within that agency.
 
-- **Statewide**: This note type is used to make statewide announcements. Statewide notes can be created by state-level agencies and once created, they will be seen by all users in the state.
+- **Statewide**: This note type is used to make statewide announcements. Statewide notes can be created by state-level agencies and once created, they are visible to all users in the state.
 
 ## Note Usage
 
