@@ -6,7 +6,7 @@ title: Invasive Map
 
 The [VectorSurv invasive map](https://maps.vectorsurv.org/invasive) shows the spread of invasive mosquito species over time, based on collection data submitted to VectorSurv.
 
-![Invasive map overview](/assets/images/docs/invasive-map.png)
+![Map on the left and chart plus summary on the right. The map is centered on California and shows red, gray, and light gray regions. The chart is a stacked bar chart with a line overlay.](/assets/images/docs/invasive-map.png)
 
 ### Map
 
@@ -16,15 +16,15 @@ Collection events are aggregated spatially into regions on the map, each of whic
 
 - **Red** indicates that the selected species was detected within the selected timeframe. Species complexes are not counted as detections. (For instance, Cx pipiens + quinquefasciatus collections do not count as _Cx quinquefasciatus_ collections.)
 
-![Invasive map with detections](/assets/images/docs/invasive-map-detections.png)
+![Map showing regions in red where the selected species was detected.](/assets/images/docs/invasive-map-detections.png)
 
 - **Gray** indicates that at least one collection occurred within the selected timeframe, but no mosquitoes of the selected species were found.
 
-![Invasive map with no detections](/assets/images/docs/invasive-map-no-detections.png)
+![Map showing regions in gray where collections occurred but the selected species was not found.](/assets/images/docs/invasive-map-no-detections.png)
 
 - **Light gray** indicates that no collections occurred within the selected timeframe.
 
-![Invasive map with no surveillance](/assets/images/docs/invasive-map-no-surv.png)
+![Map showing regions in light gray where no applicable collections occurred.](/assets/images/docs/invasive-map-no-surv.png)
 
 The following collection events are included on the map:
 
@@ -54,7 +54,7 @@ The following collection events are included on the map:
 
 Clicking any region replaces the tutorial card with a chart. Chart items can be shown or hidden by clicking the legend below the chart.
 
-![Invasive map bar chart](/assets/images/docs/invasive-map-bar-chart.png)
+![A bar chart with time on the x-axis and collections on the y-axis. The bars are a combination of gray and red, with a line chart overlaid.](/assets/images/docs/invasive-map-bar-chart.png)
 
 #### Bar chart
 
@@ -81,7 +81,7 @@ The overlaid projected growth line—available only for certain species—is a f
 
 Clicking any region displays a summary table section below the chart.
 
-![Invasive map summary](/assets/images/docs/invasive-map-summary.png)
+![Summary with regional details above a table showing counts and dates of invasive species detections in the selected region.](/assets/images/docs/invasive-map-summary.png)
 
 The summary includes:
 
