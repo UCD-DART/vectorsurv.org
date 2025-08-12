@@ -8,6 +8,8 @@ The [VectorSurv invasive map](https://maps.vectorsurv.org/invasive) shows the sp
 
 ### Map
 
+**Update frequency:** The map is refreshed once daily at midnight Pacific Time and does not display real-time data.
+
 Collection events are aggregated spatially into regions on the map, each of which represents the intersection of a census county subdivision and the boundary VectorSurv has on record for the member agency covering that area. The color in each region corresponds to the known presence or absence of the species:
 
 - Red indicates that the selected species was detected within the selected timeframe. Species complexes are not counted as detections. (For instance, Cx pipiens + quinquefasciatus collections do not count as Cx quinquefasciatus collections).
