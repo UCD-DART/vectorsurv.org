@@ -67,7 +67,7 @@ Each bar comprises up to two colored segments:
 
 Mousing over any bar brings up a tooltip with detailed counts.
 
-Charted collection events are aggregated based on the selected timeframe:
+Based on the selected timeframe, charted collection events are aggregated:
 
 - By week when the selected timeframe is 2 years or less
 - By month when the timeframe is between 2 and 5 years
@@ -75,7 +75,7 @@ Charted collection events are aggregated based on the selected timeframe:
 
 #### Projected Growth Line
 
-The overlaid projected growth line—available only for certain species—is a function of temperature. VectorSurv uses NLDAS temperature data.
+The overlaid projected growth line, which is available only for certain species, is a function of temperature. VectorSurv uses NLDAS temperature data.
 
 ### Summary Table
 
