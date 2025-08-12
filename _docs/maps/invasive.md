@@ -38,14 +38,25 @@ The following collection events are included on the map:
 - Oviposition Trap (presence/absence)
 - Reiter-Cummings Gravid Trap
 
-### Bar chart
+### Chart
 
-On the bar chart, collection events are aggregated:
+Clicking any region replaces the tutorial card with a chart. Chart items can be shown or hidden by clicking the legend below the chart.
+
+#### Bar Chart
+
+The chart uses a stacked bar chart to show collection events over time, with time on the horizontal axis and the number of collection events on the vertical axis.
+
+Each bar comprises up to two colored segments:
+
+- Red — collections containing the selected species
+- Gray — collections not containing the selected species
+
+Charted collection events are aggregated based on the selected timeframe:
 
 - By week when the selected timeframe is 2 years or less
 - By month when the timeframe is between 2 and 5 years
 - By quarter when the timeframe exceeds 5 years
 
-### Projected growth line:
+#### Projected growth line:
 
 The overlaid projected growth line, available only for certain species, is a function of temperature. VectorSurv uses NLDAS temperature data.
