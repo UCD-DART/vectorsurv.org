@@ -31,7 +31,7 @@ The following collection events are included on the map:
 - Any collection with at least one specimen that exactly matches any of the invasive species options
 - Any other collection using an eligible trap
 
-#### Eligible traps
+#### Eligible Traps
 
 - American Biophysics Corporation (ABC) trap
 - BG Sentinel
@@ -56,7 +56,7 @@ Clicking any region replaces the tutorial card with a chart. Chart items can be 
 
 ![A bar chart with time on the x-axis and collections on the y-axis. The bars are a combination of gray and red, with a line chart overlaid.](/assets/images/docs/invasive-map-bar-chart.png)
 
-#### Bar chart
+#### Bar Chart
 
 The chart uses a stacked bar format to show collection events over time, with time on the horizontal axis and the number of collection events on the vertical axis.
 
@@ -73,11 +73,11 @@ Charted collection events are aggregated based on the selected timeframe:
 - By month when the timeframe is between 2 and 5 years
 - By quarter when the timeframe exceeds 5 years
 
-#### Projected growth line
+#### Projected Growth Line
 
 The overlaid projected growth line—available only for certain species—is a function of temperature. VectorSurv uses NLDAS temperature data.
 
-### Summary table
+### Summary Table
 
 Clicking any region displays a summary table section below the chart.
 
@@ -85,14 +85,14 @@ Clicking any region displays a summary table section below the chart.
 
 The summary includes:
 
-#### Regional information
+#### Regional Information
 
 - County
 - County subdivision
 - Member agency covering the area
 - Member agency website
 
-#### Species information
+#### Species Information
 
 - _Total detections_ in the selected timeframe
 - _Total detections_ all time
