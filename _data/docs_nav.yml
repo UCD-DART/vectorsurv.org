@@ -130,6 +130,7 @@
   link: /docs/maps/maps-menu/
   docs:
     - link: /docs/maps/dengue/
+    - link: /docs/maps/invasive/
 - title: API
   link: /docs/vectorsurv-api/
   docs:
