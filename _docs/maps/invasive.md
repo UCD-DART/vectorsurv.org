@@ -60,3 +60,34 @@ Charted collection events are aggregated based on the selected timeframe:
 #### Projected growth line:
 
 The overlaid projected growth line, available only for certain species, is a function of temperature. VectorSurv uses NLDAS temperature data.
+
+### Summary Table
+
+Clicking any region displays a summary table section below the chart.
+
+The summary includes:
+
+#### Regional Information
+
+- County
+- County subdivision
+- Member agency covering the area
+- Member agency website
+
+#### Species Information
+
+A table showing, for each species listed below:
+
+- **Total detections** in the selected timeframe
+- **Total detections** all time
+- **Date first found**
+- **Date last found**
+
+Species shown include:
+
+- Aedes aegypti
+- Aedes albopictus
+- Aedes notoscriptus
+- The species currently selected
+
+The first three species are always included. They considered the invasive species of greatest concern across the United States due to their status as Dengue/Chikungunya/Zika virus vectors.
