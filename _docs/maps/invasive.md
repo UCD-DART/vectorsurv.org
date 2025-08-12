@@ -6,7 +6,7 @@ title: Invasive Map
 
 The [VectorSurv invasive map](https://maps.vectorsurv.org/invasive) shows the spread of invasive mosquito species over time, based on collection data submitted to VectorSurv.
 
-![Invasive Map](/assets/images/docs/invasive-map.png)
+![Invasive map overview](/assets/images/docs/invasive-map.png)
 
 ### Map
 
@@ -14,22 +14,22 @@ _Update frequency:_ The map is refreshed once daily at midnight Pacific Time and
 
 Collection events are aggregated spatially into regions on the map, each of which represents the intersection of a census county subdivision and the boundary VectorSurv has on record for the member agency covering that area. The color in each region corresponds to the known presence or absence of the species:
 
-- Red indicates that the selected species was detected within the selected timeframe. Species complexes are not counted as detections. (For instance, Cx pipiens + quinquefasciatus collections do not count as Cx quinquefasciatus collections).
+- **Red** indicates that the selected species was detected within the selected timeframe. Species complexes are not counted as detections. (For instance, Cx pipiens + quinquefasciatus collections do not count as _Cx quinquefasciatus_ collections.)
 
 ![Invasive map with detections](/assets/images/docs/invasive-map-detections.png)
 
-- Gray indicates that at least one collection occurred within the selected timeframe, but no mosquitoes of the selected species were found.
+- **Gray** indicates that at least one collection occurred within the selected timeframe, but no mosquitoes of the selected species were found.
 
 ![Invasive map with no detections](/assets/images/docs/invasive-map-no-detections.png)
 
-- Light gray indicates that no collections occurred within the selected timeframe.
+- **Light gray** indicates that no collections occurred within the selected timeframe.
 
-![Invasive map with detections](/assets/images/docs/invasive-map-no-surv.png)
+![Invasive map with no surveillance](/assets/images/docs/invasive-map-no-surv.png)
 
 The following collection events are included on the map:
 
-- Any collection with at least 1 specimen that exactly matches any of the invasive species options.
-- Any other collection using an eligible trap.
+- Any collection with at least one specimen that exactly matches any of the invasive species options
+- Any other collection using an eligible trap
 
 #### Eligible traps
 
@@ -54,18 +54,18 @@ The following collection events are included on the map:
 
 Clicking any region replaces the tutorial card with a chart. Chart items can be shown or hidden by clicking the legend below the chart.
 
-![Invasive Map Bar Chart](/assets/images/docs/invasive-map-bar-chart.png)
+![Invasive map bar chart](/assets/images/docs/invasive-map-bar-chart.png)
 
-#### Bar Chart
+#### Bar chart
 
-The chart uses a stacked bar chart to show collection events over time, with time on the horizontal axis and the number of collection events on the vertical axis.
+The chart uses a stacked bar format to show collection events over time, with time on the horizontal axis and the number of collection events on the vertical axis.
 
 Each bar comprises up to two colored segments:
 
-- Red — collections containing the selected species
-- Gray — collections not containing the selected species
+- **Red** — collections containing the selected species
+- **Gray** — collections not containing the selected species
 
-Mousing over any bar brings up a tooltip with detailed numbers.
+Mousing over any bar brings up a tooltip with detailed counts.
 
 Charted collection events are aggregated based on the selected timeframe:
 
@@ -73,28 +73,26 @@ Charted collection events are aggregated based on the selected timeframe:
 - By month when the timeframe is between 2 and 5 years
 - By quarter when the timeframe exceeds 5 years
 
-#### Projected growth line:
+#### Projected growth line
 
-The overlaid projected growth line, available only for certain species, is a function of temperature. VectorSurv uses NLDAS temperature data.
+The overlaid projected growth line—available only for certain species—is a function of temperature. VectorSurv uses NLDAS temperature data.
 
-### Summary Table
+### Summary table
 
 Clicking any region displays a summary table section below the chart.
 
-![Invasive Map Summary](/assets/images/docs/invasive-map-summary.png)
+![Invasive map summary](/assets/images/docs/invasive-map-summary.png)
 
 The summary includes:
 
-#### Regional Information
+#### Regional information
 
 - County
 - County subdivision
 - Member agency covering the area
 - Member agency website
 
-#### Species Information
-
-A table showing, for each species listed below:
+#### Species information
 
 - _Total detections_ in the selected timeframe
 - _Total detections_ all time
@@ -103,9 +101,9 @@ A table showing, for each species listed below:
 
 Species shown include:
 
-- Aedes aegypti
-- Aedes albopictus
-- Aedes notoscriptus
+- _Aedes aegypti_
+- _Aedes albopictus_
+- _Aedes notoscriptus_
 - The species currently selected
 
 The first three species are always included. They are considered the invasive species of greatest concern across the United States due to their status as Dengue/Chikungunya/Zika virus vectors.
