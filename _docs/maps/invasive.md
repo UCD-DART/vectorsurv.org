@@ -6,6 +6,8 @@ title: Invasive Map
 
 The [VectorSurv invasive map](https://maps.vectorsurv.org/invasive) shows the spread of invasive mosquito species over time, based on collection data submitted to VectorSurv.
 
+![Invasive Map](/assets/images/docs/invasive-map.png)
+
 ### Map
 
 _Update frequency:_ The map is refreshed once daily at midnight Pacific Time and may not display real-time data.
@@ -14,9 +16,15 @@ Collection events are aggregated spatially into regions on the map, each of whic
 
 - Red indicates that the selected species was detected within the selected timeframe. Species complexes are not counted as detections. (For instance, Cx pipiens + quinquefasciatus collections do not count as Cx quinquefasciatus collections).
 
+![Invasive map with detections](/assets/images/docs/invasive-map-detections.png)
+
 - Gray indicates that at least one collection occurred within the selected timeframe, but no mosquitoes of the selected species were found.
 
+![Invasive map with no detections](/assets/images/docs/invasive-map-no-detections.png)
+
 - Light gray indicates that no collections occurred within the selected timeframe.
+
+![Invasive map with detections](/assets/images/docs/invasive-map-no-surv.png)
 
 The following collection events are included on the map:
 
@@ -46,6 +54,8 @@ The following collection events are included on the map:
 
 Clicking any region replaces the tutorial card with a chart. Chart items can be shown or hidden by clicking the legend below the chart.
 
+![Invasive Map Bar Chart](/assets/images/docs/invasive-map-bar-chart.png)
+
 #### Bar Chart
 
 The chart uses a stacked bar chart to show collection events over time, with time on the horizontal axis and the number of collection events on the vertical axis.
@@ -70,6 +80,8 @@ The overlaid projected growth line, available only for certain species, is a fun
 ### Summary Table
 
 Clicking any region displays a summary table section below the chart.
+
+![Invasive Map Summary](/assets/images/docs/invasive-map-summary.png)
 
 The summary includes:
 
