@@ -65,9 +65,7 @@ The overlaid projected growth line, available only for certain species, is a fun
 
 ### Summary Table
 
-Clicking any region displays a summary table section below the chart.
-
-The summary includes:
+Clicking any region displays a summary table section below the chart. The summary includes:
 
 #### Regional Information
 
@@ -92,4 +90,4 @@ Species shown include:
 - Aedes notoscriptus
 - The species currently selected
 
-The first three species are always included. They considered the invasive species of greatest concern across the United States due to their status as Dengue/Chikungunya/Zika virus vectors.
+The first three species are always included. They are considered the invasive species of greatest concern across the United States due to their status as Dengue/Chikungunya/Zika virus vectors.
