@@ -8,13 +8,15 @@ The [VectorSurv invasive map](https://maps.vectorsurv.org/invasive) shows the sp
 
 ### Map
 
-**Update frequency:** The map is refreshed once daily at midnight Pacific Time and does not display real-time data.
+_Update frequency:_ The map is refreshed once daily at midnight Pacific Time and may not display real-time data.
 
 Collection events are aggregated spatially into regions on the map, each of which represents the intersection of a census county subdivision and the boundary VectorSurv has on record for the member agency covering that area. The color in each region corresponds to the known presence or absence of the species:
 
 - Red indicates that the selected species was detected within the selected timeframe. Species complexes are not counted as detections. (For instance, Cx pipiens + quinquefasciatus collections do not count as Cx quinquefasciatus collections).
+
 - Gray indicates that at least one collection occurred within the selected timeframe, but no mosquitoes of the selected species were found.
-- Light gray indaicates that no collections occurred within the selected timeframe.
+
+- Light gray indicates that no collections occurred within the selected timeframe.
 
 The following collection events are included on the map:
 
@@ -53,6 +55,8 @@ Each bar comprises up to two colored segments:
 - Red — collections containing the selected species
 - Gray — collections not containing the selected species
 
+Mousing over any bar brings up a tooltip with detailed numbers.
+
 Charted collection events are aggregated based on the selected timeframe:
 
 - By week when the selected timeframe is 2 years or less
@@ -65,7 +69,9 @@ The overlaid projected growth line, available only for certain species, is a fun
 
 ### Summary Table
 
-Clicking any region displays a summary table section below the chart. The summary includes:
+Clicking any region displays a summary table section below the chart.
+
+The summary includes:
 
 #### Regional Information
 
@@ -78,10 +84,10 @@ Clicking any region displays a summary table section below the chart. The summar
 
 A table showing, for each species listed below:
 
-- **Total detections** in the selected timeframe
-- **Total detections** all time
-- **Date first found**
-- **Date last found**
+- _Total detections_ in the selected timeframe
+- _Total detections_ all time
+- _Date first found_
+- _Date last found_
 
 Species shown include:
 
