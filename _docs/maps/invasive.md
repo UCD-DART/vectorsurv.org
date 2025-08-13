@@ -4,34 +4,29 @@ title: Invasive Map
 
 ### Overview
 
-The [VectorSurv invasive map](https://maps.vectorsurv.org/invasive) shows the spread of invasive mosquito species over time, based on collection data submitted to VectorSurv.
+The [VectorSurv invasive map](https://maps.vectorsurv.org/invasive) shows the spread of invasive mosquito species over time, based on collection data submitted to VectorSurv. The map is refreshed once daily at midnight Pacific Time and may not display real-time data.
 
 ![Map on the left and chart plus summary on the right. The map is centered on California and shows red, gray, and light gray regions. The chart is a stacked bar chart with a line overlay.](/assets/images/docs/invasive-map.png)
 
 ### Map
 
-_Update frequency:_ The map is refreshed once daily at midnight Pacific Time and may not display real-time data.
-
 Collection events are aggregated spatially into regions on the map, each of which represents the intersection of a census county subdivision and the boundary VectorSurv has on record for the member agency covering that area. The color in each region corresponds to the known presence or absence of the species:
 
-- **Red** indicates that the selected species was detected within the selected timeframe. Species complexes are not counted as detections. (For instance, Cx pipiens + quinquefasciatus collections do not count as _Cx quinquefasciatus_ collections.)
+**Red** indicates that the selected species was detected within the selected timeframe. Species complexes are not counted as detections. (For instance, _Cx pipiens + quinquefasciatus_ collections do not count as _Cx quinquefasciatus_ collections.)
 
 ![Map showing regions in red where the selected species was detected.](/assets/images/docs/invasive-map-detections.png)
 
-- **Gray** indicates that at least one collection occurred within the selected timeframe, but no mosquitoes of the selected species were found.
+**Gray** indicates that at least one collection using an eligible trap occurred within the selected timeframe, but no mosquitoes of the selected species were found.
 
 ![Map showing regions in gray where collections occurred but the selected species was not found.](/assets/images/docs/invasive-map-no-detections.png)
 
-- **Light gray** indicates that no collections occurred within the selected timeframe.
+**Light gray** indicates that no collections using an eligible trap occurred within the selected timeframe.
 
 ![Map showing regions in light gray where no applicable collections occurred.](/assets/images/docs/invasive-map-no-surv.png)
 
-The following collection events are included on the map:
+#### Eligible Traps for Surveillance
 
-- Any collection with at least one specimen that exactly matches any of the invasive species options
-- Any other collection using an eligible trap
-
-#### Eligible Traps
+Invasive detections can come from a collection using any trap type, but the map considers the following eligible traps when determining whether surveillance was performed in a region:
 
 - American Biophysics Corporation (ABC) trap
 - BG Sentinel
