@@ -150,7 +150,7 @@ legacy form is provided in case you need to edit the data.
 
 ### Input Methods:
 
-You will see a single mobile-friendly form if your screen size is smaller than 768px. If your screen size is larger than 768px, there you will see two input methods: A tabular input similar to the legacy form where you can update multiple abundances in one go and the mobile-friendly form where you can input one abundance at a time. The input style will remember the last selection you made (eg: If you selected Form Input, it will always load on Form Input until you select Tabular Input, then it will always load the Tabular Input first.)
+You will see a single mobile-friendly form if your screen size is smaller than 768px. If your screen size is larger than 768px, there you will see two input methods: A tabular input similar to the legacy form where you can update multiple abundances in one go and the mobile-friendly form where you can input one abundance at a time. The input style will remember the last selection you made (e.g.: If you selected Form Input, it will always load on Form Input until you select Tabular Input, then it will always load the Tabular Input first.)
 
 Note: Edits made using either style of input are not saved until the Save Collection or Update Collection button has been clicked.
 
@@ -207,7 +207,7 @@ Note: Edits made using either style of input are not saved until the Save Collec
   - Total females: Total number of female specimen across all abundances
     in the table.
 
-  - Total: Total number of specimen of any sex across all abundances in
+  - Total: Total number of specimens of any sex across all abundances in
     the table.
 
 ## Pool

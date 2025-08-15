@@ -4,7 +4,7 @@ v5: true
 gateway-url: https://gateway.vectorsurv.org/v5/servicevisit/visit
 ---
 
-A Service visit is a record of any work your agency has done in the field. You can record where you went and what you did while there. If you did any inspections or applied pesticide those can be entered explicitly.
+A Service Visit is a record of any work your agency has done in the field. You can record where you went and what you did while there. If you did any inspections or applied pesticide those can be entered explicitly.
 
 ## Service Visit Form
 
@@ -21,10 +21,10 @@ A Service visit is a record of any work your agency has done in the field. You c
 - **Start Time**: The time the Service Visit started. You can type specific times or use the dropdown
   select to pick times by 15 minute increments.
 
-- **End Time**: The time the Service Visit started. You can type specific times or use the dropdown
+- **End Time**: The time the Service Visit ended. You can type specific times or use the dropdown
   select to pick times by 15 minute increments.
 
-- **Latitude and Longitude**: The location of the Service Vist. Coordinates can be entered manually. The fields can also be automatically populated by either expanding the map and clicking on the desired location or by typing an address in the GeoCode field in the upper right (i.e., the magnifying glass). Note: clicking on the "Recenter Map" icon in the lower right corner will cause the map to pan back to the current Service Visit location.
+- **Latitude and Longitude**: The location of the Service Visit. Coordinates can be entered manually. The fields can also be automatically populated by either expanding the map and clicking on the desired location or by typing an address in the GeoCode field in the upper right (i.e., the magnifying glass). Note: clicking on the "Recenter Map" icon in the lower right corner will cause the map to pan back to the current Service Visit location.
 
 - **Comments**: Add any notes that may be of interest here.
 

@@ -16,7 +16,7 @@ View saved Service Visit records.
 
 ### Table
 
-- sort the table by any field by clicking on the column name.
+- Sort the table by any field by clicking on the column name.
 
 - Beneath the table, you can navigate between pages using the arrows or clicking on a page number. You can also change how many records to display on a single page using the Items/page dropdown option.
 

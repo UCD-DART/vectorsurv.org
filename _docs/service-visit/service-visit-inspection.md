@@ -10,7 +10,7 @@ After creating a Service Visit record a new Collection/Inspection card will appe
 
 **Table**
 
-Any associated Inspections will be displayed in the table here. Users can sort the table by clicking on the appropriate column header. Clicking on a "pencil" icon will naviagte the user to the appropriate Collection Update form where they can make corrections as needed . The "link-slash" icon will unlink the Inspection/collection record from the Service Visit.
+Any associated Inspections will be displayed in the table here. Users can sort the table by clicking on the appropriate column header. Clicking on a "pencil" icon will navigate the user to the appropriate Collection Update form where they can make corrections as needed . The "link-slash" icon will unlink the Inspection/collection record from the Service Visit.
 
 **Linking Inspections**
 
@@ -18,11 +18,11 @@ Clicking the **Link Collection** button will open up a panel for associating exi
 
 ![Address input](/assets/images/docs/Inspection_link_form_service_visit_module.png)
 
-- The map will show all Collections within seven days of the Service Vsiit record.
+- The map will show all Collections within seven days of the Service Visit record.
 - Clicking on a "link" icon in the Available Collections table will associate the record with the current Service Visit.
 - Clicking on the "link-slash" icon in the Linked Collections table will unlink the Application record from the Service Visit.
 
-**Add Inpsection/Collection**
+**Add Inspection/Collection**
 
 Clicking the **Add Inspection** button will open up a panel for creating new associated Inspection records. These are are Arthro Collection records with a trap type of either "Household Inspection (counts)" or "Household Inspection (presence/absence)".
 
@@ -32,12 +32,12 @@ Clicking the **Add Inspection** button will open up a panel for creating new ass
 
 **Fields**
 
-- **Trap**: The type of inspection made at the Service Visit site. Choices include "Household Inspection (counts)" or "Household Inspection (presence/absence)". If a choice is missing please review your agency trag configuration [Trap Types Configuation]({{ site.baseurl }}/docs/arthropod/trap-types/).
+- **Trap**: The type of inspection made at the Service Visit site. Choices include "Household Inspection (counts)" or "Household Inspection (presence/absence)". If a choice is missing please review your agency trap configuration [Trap Types Configuration]({{ site.baseurl }}/docs/arthropod/trap-types/).
 
 **Site**
 The user will be able to place the inspection at either an existing site or create a new site here in the form by using the "Create New Site" toggle.
 
-- **Site Code**: Start typing in any part of the site code or name and the dropdown will filter the sites to that text. Selecting a site code from the dropdown select will place a marker on the map. If creating a new site just enter the desired numeric site code. It must be unique to you agency.
+- **Site Code**: Start typing in any part of the site code or name and the dropdown will filter the sites to that text. Selecting a site code from the dropdown select will place a marker on the map. If creating a new site just enter the desired numeric site code. It must be unique within your agency.
 
 - **Site Name**: This field is only available when creating a new site. It is intended to be an easily memorable moniker for the site. It does not need to be unique.
 

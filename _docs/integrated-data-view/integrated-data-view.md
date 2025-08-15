@@ -12,9 +12,9 @@ View multiple record types in one place. The Integrated Data View allows users t
 
 ![Data View record Filters](/assets/images/docs/data-view-record-filters.png)
 
-**Date**: lets you select a custom timeframe to search for records. Click the refresh button ![Refresh Button](/assets/images/docs/refresh-btn.png) to fetch the relevant data.
+**Date**: Lets you select a custom timeframe to search for records. Click the refresh button ![Refresh Button](/assets/images/docs/refresh-btn.png) to fetch the relevant data.
 
-**Data Settings**: Clicking on the gear ![Data Setting Icon](/assets/images/docs/gear-btn.png) icon will open a settings modal where users can select what record types to show in the tables and on the map. Click **Apply** to fetch new record types or **Cancel** to leave the settings unchanged.
+**Data Settings**: Clicking on the gear ![Data Setting Icon](/assets/images/docs/gear-btn.png) icon will open a settings modal where you can select which record types to show in the tables and on the map. Click **Apply** to fetch new record types or **Cancel** to leave the settings unchanged.
 
 ## Tables
 
@@ -28,7 +28,7 @@ After selecting the data, use the tabs to switch between the data tables for the
 
 - **Pagination**: If there are more than 5 records in a table, a pagination selector will appear at the bottom allowing users to page through data.
 
-- **Action Buttons**:If the user has the ability to manage data, they will see the following icons.
+- **Action Buttons**: If the user has the ability to manage data, they will see the following icons.
   - Clicking the **Delete icon** ![Red trash can icon](/assets/images/docs/action-button-delete.png) in a row allows users to delete the associated record.
   - Clicking the **Edit icon** ![Pencil icon](/assets/images/docs/action-button-edit.png) will open a new tab to view and/or edit the associated record.
 
@@ -42,7 +42,7 @@ After selecting the date filter and record types, relevant data will appear on t
 - **Map Controls**:
 
   - **Recenter**: The recenter button ![Recenter Button](/assets/images/docs/recenter-btn.png) will refocus the map to encompass all existing data features. If there are no data features on the map, clicking this button will pan the view to the user's current agency location.
-  - **Geocoder**: The geocoder tool allows you to quickly search for and zoom to addresses or locations on the map. Clicking the geocoder icon ![Magnifying Glass](/assets/images/docs/magnifying-glass.png) opens a search bar where you can enter an address or place name.
+  - **Geocoder**: The geocoder tool allows you to quickly search for and zoom to an address or location on the map. Clicking the geocoder icon ![Magnifying Glass](/assets/images/docs/magnifying-glass.png) opens a search bar where you can enter an address or place name.
 
   ![Geocoder](/assets/images/docs/geocoder.png)
 
