@@ -13,6 +13,6 @@ Pool submissions are records of groups of mosquitoes sent to be tested for arbov
 
 View and edit saved pools.
 
-### [Testing]({{ site.baseur1 }}/docs/arthropod/testing)
+### [Testing]({{ site.baseurl }}/docs/arthropod/testing)
 
 Create and manage new pool test results.

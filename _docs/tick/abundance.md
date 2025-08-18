@@ -10,6 +10,6 @@ gateway-url: https://gateway.vectorsurv.org/v5/tick/collection
 
 Record tick population data through the placement of traps.
 
-### [Collection Management]({{ site.baseur1 }}/docs/tick/collection-manage)
+### [Collection Management]({{ site.baseurl }}/docs/tick/collection-manage)
 
 View and edit saved abundance records.

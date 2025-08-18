@@ -4,12 +4,12 @@ gateway-url: https://gateway.vectorsurv.org/resistance/ppf/larval
 ---
 Add larval resistance test results here.
 
-* **Setup Date**: The date this test was started. Date format is based on the settings under [Account Preferences]({{ site.baseur1 }}/docs/settings/account-preferences).
+* **Setup Date**: The date this test was started. Date format is based on the settings under [Account Preferences]({{ site.baseurl }}/docs/settings/account-preferences).
 * **Read Date**: The date this test was concluded. Should be after the Setup Date.
 * **Material**: Enter the pesticide used for this larval resistance test in the text field. Check the box below this field if the material used was of technical grade.
 * **Lot #**: The lot # for this batch of material.
 * **Species**: Choose the species that was tested by typing in the species name or using the dropdown arrow to choose the species.
-* **Mosquito Source**: What was the source of these mosquitoes? If these were colony mosquitoes, enter the colony name and a brief description of this colony. If they were field-collected, indicate on the map where the collections came from by typing in coordinates or using one of the geographical features icons on the map. ![geo-features]({{ site.baseur1 }}/assets/images/docs/geo-features.PNG)
+* **Mosquito Source**: What was the source of these mosquitoes? If these were colony mosquitoes, enter the colony name and a brief description of this colony. If they were field-collected, indicate on the map where the collections came from by typing in coordinates or using one of the geographical features icons on the map. ![geo-features]({{ site.baseurl }}/assets/images/docs/geo-features.PNG)
 * **Tested By**: The name of the person performing this test.
 * **Description**: A description of the larval resistance test performed or any notes regarding this test.
 

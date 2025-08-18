@@ -11,7 +11,7 @@ gateway-url: https://gateway.vectorsurv.org/v5/mosquito
 
 Record arthropod population data through the placement of traps.
 
-### [Collection Management]({{ site.baseur1 }}/docs/arthropod/v5/collection-manage)
+### [Collection Management]({{ site.baseurl }}/docs/arthropod/v5/collection-manage)
 
 View and edit saved abundance records.
 

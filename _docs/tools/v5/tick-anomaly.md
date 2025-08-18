@@ -50,14 +50,14 @@ $$\text{Geometric mean: }  \ \   \bar G =[(x_i+1)^{\frac{1}{n}}(x_{i+1}+1)^{\fra
 - ### **Spatial Filter**
 
   The spatial filters refine calculation results by location. If the “Treat each spatial filter independently” box is checked, the calculation will be run separately per spatial filter, otherwise abundance will be aggregated for the selection. Spatial filters only apply to selected agencies; you cannot calculate abundance within spatial features for peer agencies. Instead, all tick abundance from selected peer agencies is used for the calculation.  
-   ![Spatial Filter example]({{ site.baseur1 }}/assets/images/docs/calc_spatial.png)
+   ![Spatial Filter example]({{ site.baseurl }}/assets/images/docs/calc_spatial.png)
 
   - **_Feature_**: Users can draw a polygon on the map or choose from available features. Available features include those derived by the system based on the user’s agency boundaries and those features defined for the agency on the Spatial Features page. Clicking on a polygon will provide details for the feature, including area, name, and number of vertices.
   - **_Site Group_**: If your agency has defined any Site Groups they will be listed as options in the multi-select field here. Selecting a group will populate the map with the appropriate site markers. Clicking on a marker will provide details for the site, including coordinates, site name, and site group name.
   - **_Region_**: The Available regions table on this tab will be populated with any region that has been utilized by site in the user’s agency. Clicking on a polygon will provide details for the region, including area, name, and number of vertices.
   - **_Site_**: The site filter multi-select will have all sites from selected agencies (but not Peer Agencies) available. Typing in the field will fetch a new set of up to 50 sites based on the text. Holding down the shift key while selecting sites will allow the user to grab multiple sites at once. Due to the large number of possible sites calculation results cannot be stratified by individual sites. The “Treat each spatial filter independently” box is not available on this tab.
 
-  ![Recenter map on existing features]({{ site.baseur1 }}/assets/images/docs/spatial-recenter.png)  
+  ![Recenter map on existing features]({{ site.baseurl }}/assets/images/docs/spatial-recenter.png)  
    When available, clicking on the “Recenter” button in the lower right corner of the map will cause the map to center on the chosen spatial filters.
 
 ### ‎ {#surroundings}
@@ -84,7 +84,7 @@ The **# of Calculations** indicator shows how many calculations will be performe
 
 The resulting table is downloadable. Select your preferred file format and click the blue download button to the right. You also have the option to view a time series graph comparing the current year's abundance curve to the 5-year average abundance curve, shown at the bottom of this page.
 
-![Table example]({{ site.baseur1 }}/assets/images/docs/calc_taa_table.png)
+![Table example]({{ site.baseurl }}/assets/images/docs/calc_taa_table.png)
 
 - **Result**: Abundance is indicated by the selected calculation year column (ex: '2024 Value'). How the abundance is calculated is determined by the selected Calculation Type. The abundance value per row is for the time interval.
 - **Collections**: The total trapping events matching selected filters for the time interval.
@@ -93,7 +93,7 @@ The resulting table is downloadable. Select your preferred file format and click
 - **Mean**: The five-year average abundance calculated as specified for the time interval.
 - **Years in Mean**: The available years included in the five-year average. If a year is not present, then there is no data currently in the system for that year. Years will display in red if less than 3 years of data are included or there are gaps in the years.
 
-![Graph example]({{ site.baseur1 }}/assets/images/docs/calc_taa_graph.png)
+![Graph example]({{ site.baseurl }}/assets/images/docs/calc_taa_graph.png)
 
 - **<<**: Go to first graph. Only shown if more than two graphs are available.
 - **<**: Go to previous graph. Only shown if more than one graph is available.

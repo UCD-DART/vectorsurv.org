@@ -10,14 +10,14 @@ Sites are essentially bookmarks for trap locations. They will help you quickly r
 
 View documentation for v5 version of forms.
 
-### [Site Groups]({{ site.baseur1 }}/docs/site/site-group)
+### [Site Groups]({{ site.baseurl }}/docs/site/site-group)
 
 Organize trap sites that are commonly analyzed together.
 
-### [New Site (Legacy)]({{ site.baseur1 }}/docs/site/)
+### [New Site (Legacy)]({{ site.baseurl }}/docs/site/)
 
 Create a new site to quickly record surveillance events.
 
-### [Manage Sites (Legacy)]({{ site.baseur1 }}/docs/site/site_manage)
+### [Manage Sites (Legacy)]({{ site.baseurl }}/docs/site/site_manage)
 
 View and edit saved sites.

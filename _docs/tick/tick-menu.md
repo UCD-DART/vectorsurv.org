@@ -10,6 +10,6 @@ gateway-url: https://gateway.vectorsurv.org/v5/tick
 
 Enter and manage collections and link to tools relating to tick abundance.
 
-### [Pools]({{ site.baseur1 }}/docs/tick/pools-menu)
+### [Pools]({{ site.baseurl }}/docs/tick/pools-menu)
 
 Enter and manage pools and arbovirus testing results.

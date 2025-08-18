@@ -9,4 +9,4 @@ gateway-url: https://gateway.vectorsurv.org/v5/tools/calculators
 
 Use these calculators to estimate arbovirus risk.
 
-### [Tick Abundance Anomaly]({{ site.baseur1 }}/docs/tools/v5/tick-anomaly)
+### [Tick Abundance Anomaly]({{ site.baseurl }}/docs/tools/v5/tick-anomaly)

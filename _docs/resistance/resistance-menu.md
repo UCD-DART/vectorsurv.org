@@ -4,10 +4,10 @@ gateway-url: https://gateway.vectorsurv.org/core/ppf/menu/path/106
 ---
 Resistance menu
 
-### [Larval Tests]({{ site.baseur1 }}/docs/resistance/larval-menu)
+### [Larval Tests]({{ site.baseurl }}/docs/resistance/larval-menu)
 
 Enter and manage larval test results.
 
-### [Bottle Bioassay]({{ site.baseur1 }}/docs/resistance/bioassay-menu)
+### [Bottle Bioassay]({{ site.baseurl }}/docs/resistance/bioassay-menu)
 
 Enter and manage bottle bioassay results.

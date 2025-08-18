@@ -11,12 +11,12 @@ Records flagged by the system can be removed from this table in three ways:
 2. When a record is edited, its potential issue status will be reset. If the data discrepancy still exists, the record will appear in the table again after the next sweep.
 3. Deleted records do not appear in the table.
 
-If your current agency has potential data issues, red dots will appear around the **Issues** tab at the top of the page. ![Issues]({{ site.baseur1 }}/assets/images/docs/issues.PNG)
+If your current agency has potential data issues, red dots will appear around the **Issues** tab at the top of the page. ![Issues]({{ site.baseurl }}/assets/images/docs/issues.PNG)
 
 The **Manage Issues** table tracks multiple types of issues:
 
 - Date issues are noted for collections and pools where the record was created in the gateway before its assigned collection date.
-- Spatial issues are noted when coordinates for a [site]({{ site.baseur1 }}/docs/site/ or [collection]({{ site.baseur1 }}/docs/arthropod/collection) fall outside agency boundaries. If an agency has no boundaries in the Gateway, state boundaries are used instead.
+- Spatial issues are noted when coordinates for a [site]({{ site.baseurl }}/docs/site/ or [collection]({{ site.baseurl }}/docs/arthropod/collection) fall outside agency boundaries. If an agency has no boundaries in the Gateway, state boundaries are used instead.
 
 The **Manage Issues** table displays information about each record with either a Spatial or Date issue. If a record has multiple potential issues, it will appear in the table for each type.
 
@@ -24,12 +24,12 @@ The **Manage Issues** table displays information about each record with either a
 - **Add Date**: The date the record was added to the Gateway.
 - **Issue Description**: Whether this issue is Spatial or Date and a brief description of the issue.
 - **Off By**: For date issues, this is the difference in days between the active date and the add date. For spatial issues, this is the distance from the record's coordinates to the agency's boundaries.
-- **View/Edit**: Use this link to view and/or edit the record. Clicking the link will bring you to a filled-in page for the type of record that was flagged, similiar to editing a record from the [Collection Management]({{ site.baseur1 }}/docs/arthropod/collection-manage) page, for example. A box at the top of the page will identify the issue(s) with this record and suggest possible actions. You can either click within the box to return to the **Manage Issues** page or click the **Update** button at the bottom of the page to save any changes.
-  ![Issues box]({{ site.baseur1 }}/assets/images/docs/issues-box.PNG)
+- **View/Edit**: Use this link to view and/or edit the record. Clicking the link will bring you to a filled-in page for the type of record that was flagged, similiar to editing a record from the [Collection Management]({{ site.baseurl }}/docs/arthropod/collection-manage) page, for example. A box at the top of the page will identify the issue(s) with this record and suggest possible actions. You can either click within the box to return to the **Manage Issues** page or click the **Update** button at the bottom of the page to save any changes.
+  ![Issues box]({{ site.baseurl }}/assets/images/docs/issues-box.PNG)
 - **Comments**: Click the ellipsis to add any comments about this issue. It is highly recommended to include comments if the record will be submitted as resolved (see below) to explain why the record is correct.
 - **Actions**: Click the _Submit as Resolved_ link to indicate that this record appears as intended (for instance, the site is intentionally outside agency boundaries). This will remove the record from the **Manage Issues** table. It will also prevent the record from being flagged for the same issue in the future.
 
 Records in the table can be filtered by name, date, type of issue, etc. using the search box below the table.
-![Filter issues]({{ site.baseur1 }}/assets/images/docs/filter-issues.PNG)
+![Filter issues]({{ site.baseurl }}/assets/images/docs/filter-issues.PNG)
 
 Note: It is recommended to handle site issues before collection issues. This is because collections may inherit site spatial issues, such that fixing or resolving a site's issues will remove its dependent collections from the **Manage Issues** table.

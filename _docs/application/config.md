@@ -36,8 +36,8 @@ Creating mixes in the Gateway allows you to record applications of the specific 
 - **Description**: A short description of this mix.
 - **Products**: The active product in the mix. There are three fields for the product name, the quantity used, and the units. To add a product, search by name or EPA registered number. Make sure to double check the number on your product as some products appear multiple times and formulations can change. Mixes can consist of as little as 1 product.
 
-  ![Products]({{ site.baseur1 }}/assets/images/docs/mix-products.PNG)
+  ![Products]({{ site.baseurl }}/assets/images/docs/mix-products.PNG)
 
 - **Diluents**: Note whether the product was diluted in any form. Mixes do not have to include a diluent. There are three fields for the diluent name, the quantity used, and the units.
 
-  ![Diluents]({{ site.baseur1 }}/assets/images/docs/mix-diluents.PNG)
+  ![Diluents]({{ site.baseurl }}/assets/images/docs/mix-diluents.PNG)

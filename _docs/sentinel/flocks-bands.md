@@ -5,7 +5,7 @@ gateway-url: https://gateway.vectorsurv.org/core/ppf/menu/path/22
 
 Flocks/Bands menu
 
-### [New Flock]({{ site.baseur1 }}/docs/sentinel/new-flock)
+### [New Flock]({{ site.baseurl }}/docs/sentinel/new-flock)
 
 Set up a new sentinel chicken flock for your agency.
 

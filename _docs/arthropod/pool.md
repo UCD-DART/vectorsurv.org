@@ -7,7 +7,7 @@ youtube-url: https://youtu.be/cZAveMzkIvU
 
 Pool submissions are records of groups of mosquitoes sent to be tested for arboviruses.
 
-This page serves the same purpose as the optional pool entry form on the [new collection]({{ site.baseurl }}/docs/arthropod/collection) page. Pools entered here can be linked back to a specific collection from the [Collection Management]({{ site.baseur1 }}/docs/arthropod/collection-manage) page. One or the other should be used to submit a single pool.
+This page serves the same purpose as the optional pool entry form on the [new collection]({{ site.baseurl }}/docs/arthropod/collection) page. Pools entered here can be linked back to a specific collection from the [Collection Management]({{ site.baseurl }}/docs/arthropod/collection-manage) page. One or the other should be used to submit a single pool.
 
 ## Fields
 

@@ -6,7 +6,7 @@ KDR/Microplate menu
 
 ### KDR Tube Manage
 
-### [KDR Tube Submission]({{ site.baseur1 }}/docs/resistance/kdr-tube-submission)
+### [KDR Tube Submission]({{ site.baseurl }}/docs/resistance/kdr-tube-submission)
 
 ### KDR Tube Submission Manage
 

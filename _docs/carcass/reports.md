@@ -13,7 +13,7 @@ If your agency conducts a dead bird testing program, you can enter reported bird
 * **# of Carcasses**: How many dead birds were reported at this site? This number will generally be 1.
 * **Carcasses**: Description of the dead bird. If more than one carcass was reported, there will be one box per bird.
   * **Species**: Choose the species (if identifiable) from a number of common birds. If more than one carcass of the same species was reported, you can copy the value to all other carcasses by clicking on the icon to the right.
-  ![Dead bird example report]({{ site.baseur1 }}/assets/images/docs/dead-bird-example2.png)
+  ![Dead bird example report]({{ site.baseurl }}/assets/images/docs/dead-bird-example2.png)
   * **Condition**: In what condition was the bird found? You can copy this value to all other carcasses by clicking on the icon to the right.
   * **Collected by**: The name of the agency individual who collected the dead bird. You can copy this value to all other carcasses by clicking on the icon to the right.
   * **Comments**: Any other comments that should be noted with the report. You can also indicate other information about the carcass through the checkboxes below the comments box. Note that if *Carcass is located in the street or on a sidewalk* is checked, the other two choices are not available to check and vice versa.
