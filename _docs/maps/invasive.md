@@ -12,32 +12,11 @@ The [VectorSurv invasive map](https://maps.vectorsurv.org/invasive) shows the sp
 
 Collection events are aggregated spatially into regions on the map, each of which represents the intersection of a census county subdivision and the boundary VectorSurv has on record for the member agency covering that area. The color in each region corresponds to the known presence or absence of the species:
 
-**Red** indicates that the selected species was detected within the selected timeframe. Species complexes are not counted as detections. (For instance, _Cx pipiens + quinquefasciatus_ collections do not count as _Cx quinquefasciatus_ collections.) ![Map showing regions in red where the selected species was detected.](/assets/images/docs/invasive-map-detections.png)
+**Red** indicates that the selected species was detected within the selected timeframe. ![Map showing regions in red where the selected species was detected.](/assets/images/docs/invasive-map-detections.png)
 
-**Gray** indicates that at least one collection using an eligible trap occurred within the selected timeframe, but no mosquitoes of the selected species were found. ![Map showing regions in gray where collections occurred but the selected species was not found.](/assets/images/docs/invasive-map-no-detections.png)
+**Gray** indicates that at least one collection occurred within the selected timeframe, but no mosquitoes of the selected species were found. ![Map showing regions in gray where collections occurred but the selected species was not found.](/assets/images/docs/invasive-map-no-detections.png)
 
-**Light gray** indicates that no collections using an eligible trap occurred within the selected timeframe. ![Map showing regions in light gray where no applicable collections occurred.](/assets/images/docs/invasive-map-no-surv.png)
-
-#### Eligible Traps for Surveillance
-
-Invasive detections can come from a collection using any trap type, but the map considers the following eligible traps when determining whether surveillance was performed in a region:
-
-- American Biophysics Corporation (ABC) trap
-- BG Sentinel
-- Carbon dioxide baited trap
-- CDC Autocidal Gravid Ovitrap (counts)
-- CDC Autocidal Gravid Ovitrap (presence/absence)
-- CDC miniature light trap
-- CDC-style Gravid Trap
-- Collection Bottle Rotator Trap
-- EVS (Encephalitis Vector Survey) trap
-- Frommer Updraft Gravid Trap
-- Gravid trap
-- Modified CDC Autocidal Gravid Ovitrap (counts)
-- New Jersey light trap
-- Oviposition Trap (counts)
-- Oviposition Trap (presence/absence)
-- Reiter-Cummings Gravid Trap
+**Light gray** indicates that no collections occurred within the selected timeframe. ![Map showing regions in light gray where no applicable collections occurred.](/assets/images/docs/invasive-map-no-surv.png)
 
 ### Chart
 
