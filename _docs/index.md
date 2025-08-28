@@ -36,6 +36,9 @@ permalink: /docs/
             <a class="linkclass" href="{{ site.baseurl }}/docs/service-visit/service-visit-menu/">Service Visit</a>
         </li>
          <li>
+            <a class="linkclass" href="{{ site.baseurl }}/docs/integrated-data-view/integrated-data-view/">Integrated Data View</a>
+        </li>
+         <li>
             <a class="linkclass" href="{{ site.baseurl }}/docs/tools/tools-menu/">Tools</a>
         </li>
         <li>
