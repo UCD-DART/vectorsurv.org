@@ -14,12 +14,15 @@ permalink: /usefultools/
   <a class="gallery-item" href="{{ tool.url }}">
     {% if tool.image %}
       <div class="gallery-item-image">
-        <img src="{{ site.baseURL}}/assets/images/external_tools/{{ tool.image }}">
+        <img src="{{ site.baseURL}}/assets/images/external_tools/{{ tool.image }}" alt="Example image of tool: {{tool.name}}">
       </div>
     {% endif %}
       <div class="gallery-item-body">
         <h2>{{ tool.name }}</h2>
-        <p><em>Developed by {{ tool.developer }}</em></p>
+        <p>
+          <em><strong>Developed by:</strong> {{ tool.developer }}</em><br />
+          <em><strong>Contact:</strong> {{ tool.contact_email }}</em>
+        </p>
         <div>{{ tool.description }}</div>
         {% if tool.papers.size > 0 %}
           <div>

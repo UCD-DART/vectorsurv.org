@@ -11,7 +11,8 @@ If you have a tool that you believe would be useful to the vector control commun
 -	Name of your tool
 -	Description (text only)
 -	Developer name
--	Developer email address (so that we can contact the developer with any questions)
+- Contact name 
+- Contact email address (where should questions be sent?)
 -	Desired image as a .png or .jpg with an aspect ratio of 16:9. 
 
 
@@ -19,9 +20,9 @@ We recommend that you create and maintain documentation for users that is linked
 
 ## Requirements
 We will consider including tools that:
-1.	are free of charge and not require any services that require a fee. It is acceptable to use other data or services that require user accounts as long as there is no fee to access them.
+1.	Are free of charge and not require any services that require a fee. It is acceptable to use other data or services that require user accounts as long as there is no fee to access them.
 2.	Provide significant value to individuals in the public health and / or vector control community.
-3.	are maintained to ensure correct behavior. A tool that has known issues that are not corrected may be removed from the list. 
+3.	Are maintained to ensure correct behavior. A tool that has known issues that are not corrected may be removed from the list. 
 4. Provide dynamic functionality, i.e., a calculator or model, not a static webpage
 
 <p style="margin-top:3em; font-size:smaller;"><em>
