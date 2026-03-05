@@ -13,16 +13,22 @@ Calculates mosquito abundance — the average number of mosquitoes caught per tr
 $$\text{Abundance} = \frac{\text{Total Individuals}}{\text{Total Trap Nights}}$$
 
 ```r
-getAbundance(collections, interval, species = NULL, trap = NULL, separate_by = "species")
+getAbundance(collections, interval, agency = NULL, species = NULL, trap = NULL,
+             sex = "female", trapnight_min = 1, trapnight_max = NULL,
+             separate_by = NULL)
 ```
 
-| Argument | Description |
-|---|---|
-| `collections` | Collections data from `getArthroCollections()` |
-| `interval` | Time interval: `"collection_date"`, `"Week"`, `"Biweek"`, or `"Month"` |
-| `species` | Optional species filter. Use `unique(collections$species_display_name)` to see options. |
-| `trap` | Optional trap type filter. Use `unique(collections$trap_acronym)` to see options. |
-| `separate_by` | Split results by `"species"`, `"trap"`, or both. Default separates by species. |
+| Argument        | Description                                                                                                       |
+| --------------- | ----------------------------------------------------------------------------------------------------------------- |
+| `collections`   | Collections data from `getArthroCollections()`                                                                    |
+| `interval`      | Time interval: `"CollectionDate"`, `"Week"`, `"Biweek"`, or `"Month"`                                             |
+| `agency`        | Optional character vector for filtering by agency code                                                            |
+| `species`       | Optional species filter. Use `unique(collections$species_display_name)` to see options. Defaults to all species.  |
+| `trap`          | Optional trap type filter. Use `unique(collections$trap_acronym)` to see options. Defaults to all trap types.     |
+| `sex`           | Sex type filter. Use `unique(collections$sex_type)` to see options. Defaults to `"female"`.                       |
+| `trapnight_min` | Minimum trap nights required for a collection to be included. Default is `1`.                                     |
+| `trapnight_max` | Maximum trap nights allowed. Default is no restriction.                                                           |
+| `separate_by`   | Group results by `"species"`, `"trap"`, `"agency"`, `"county"`, or `"spatial"`. Default `NULL` does not separate. |
 
 **Example**
 
@@ -49,18 +55,23 @@ Compares the target year's abundance against the 5-year historical average for t
 $$\text{Anomaly (\%)} = \frac{\text{Current Year Abundance} - \text{5-Year Mean}}{\text{5-Year Mean}} \times 100$$
 
 ```r
-getAbundanceAnomaly(collections, interval, target_year,
-                    species = NULL, trap = NULL, separate_by = NULL)
+getAbundanceAnomaly(collections, interval, target_year, agency = NULL,
+                    species = NULL, trap = NULL, sex = "female",
+                    trapnight_min = 1, trapnight_max = NULL, separate_by = NULL)
 ```
 
-| Argument | Description |
-|---|---|
-| `collections` | Collections data from `getArthroCollections()`. Must span at least 6 years. |
-| `interval` | Time interval: `"collection_date"`, `"Week"`, `"Biweek"`, or `"Month"` |
-| `target_year` | Year to calculate anomaly for. Data must cover `target_year - 5` through `target_year`. |
-| `species` | Optional species filter |
-| `trap` | Optional trap type filter |
-| `separate_by` | Split results by `"species"`, `"trap"`, or both |
+| Argument        | Description                                                                                                       |
+| --------------- | ----------------------------------------------------------------------------------------------------------------- |
+| `collections`   | Collections data from `getArthroCollections()`. Must span at least 6 years.                                       |
+| `interval`      | Time interval: `"CollectionDate"`, `"Week"`, `"Biweek"`, or `"Month"`                                             |
+| `target_year`   | Year to calculate anomaly for. Data must cover `target_year - 5` through `target_year`.                           |
+| `agency`        | Optional character vector for filtering by agency code                                                            |
+| `species`       | Optional species filter. Use `unique(collections$species_display_name)` to see options. Defaults to all species.  |
+| `trap`          | Optional trap type filter. Use `unique(collections$trap_acronym)` to see options. Defaults to all trap types.     |
+| `sex`           | Sex type filter. Defaults to `"female"`.                                                                          |
+| `trapnight_min` | Minimum trap nights required for a collection to be included. Default is `1`.                                     |
+| `trapnight_max` | Maximum trap nights allowed. Default is no restriction.                                                           |
+| `separate_by`   | Group results by `"species"`, `"trap"`, `"agency"`, `"county"`, or `"spatial"`. Default `NULL` does not separate. |
 
 **Example**
 
@@ -85,20 +96,24 @@ getAbundanceAnomaly(
 Estimates the arbovirus infection rate from pool testing data. Three estimation methods are available. Results are typically scaled per 1,000 mosquitoes for easier interpretation.
 
 ```r
-getInfectionRate(pools, interval, target_year, target_disease,
-                 pt_estimate, scale = 1000, species = NULL, trap = NULL)
+getInfectionRate(pools, interval, target_year, target_disease, pt_estimate,
+                 scale = 1000, agency = NULL, species = NULL, trap = NULL,
+                 sex = NULL, separate_by = NULL)
 ```
 
-| Argument | Description |
-|---|---|
-| `pools` | Pools data from `getPools()` |
-| `interval` | Time interval: `"Week"`, `"Biweek"`, or `"Month"` |
-| `target_year` | Year to calculate infection rate for |
-| `target_disease` | Disease acronym (e.g., `"WNV"`). Use `unique(pools$target_acronym)` to see options. |
-| `pt_estimate` | Estimation method: `"mle"` (maximum likelihood), `"bc-mle"` (bias-corrected MLE), or `"mir"` (minimum infection rate) |
-| `scale` | Result multiplier. Default is `1000` (rate per 1,000 mosquitoes). |
-| `species` | Optional species filter |
-| `trap` | Optional trap type filter |
+| Argument         | Description                                                                                                           |
+| ---------------- | --------------------------------------------------------------------------------------------------------------------- |
+| `pools`          | Pools data from `getPools()`                                                                                          |
+| `interval`       | Time interval: `"CollectionDate"`, `"Week"`, `"Biweek"`, or `"Month"`                                                 |
+| `target_year`    | Year to calculate infection rate for                                                                                  |
+| `target_disease` | Disease acronym (e.g., `"WNV"`). Use `unique(pools$target_acronym)` to see options.                                   |
+| `pt_estimate`    | Estimation method: `"mle"` (maximum likelihood), `"bc-mle"` (bias-corrected MLE), or `"mir"` (minimum infection rate) |
+| `scale`          | Result multiplier. Default is `1000` (rate per 1,000 mosquitoes).                                                     |
+| `agency`         | Optional character vector for filtering by agency code                                                                |
+| `species`        | Optional species filter. Use `unique(pools$species_display_name)` to see options. Defaults to all species.            |
+| `trap`           | Optional trap type filter. Use `unique(pools$trap_acronym)` to see options. Defaults to all trap types.               |
+| `sex`            | Optional sex type filter. Defaults to `"female"`.                                                                     |
+| `separate_by`    | Group results by `"species"`, `"trap"`, or `"agency"`. Default `NULL` does not separate.                              |
 
 **Estimation methods**
 
@@ -138,19 +153,27 @@ $$\text{Vector Index} = \text{Abundance} \times \text{Infection Rate}$$
 Collections and pools data must overlap in the years they cover.
 
 ```r
-getVectorIndex(collections, pools, interval, target_disease,
-               pt_estimate, species = NULL, trap = NULL)
+getVectorIndex(collections, pools, interval, target_disease, pt_estimate,
+               scale = 1000, agency = NULL, species = NULL, trap = NULL,
+               sex = "female", trapnight_min = 1, trapnight_max = NULL,
+               separate_by = NULL)
 ```
 
-| Argument | Description |
-|---|---|
-| `collections` | Collections data from `getArthroCollections()` |
-| `pools` | Pools data from `getPools()`. Must share overlapping years with collections. |
-| `interval` | Time interval: `"Week"`, `"Biweek"`, or `"Month"` |
-| `target_disease` | Disease acronym (e.g., `"WNV"`) |
-| `pt_estimate` | Infection rate estimation method: `"mle"`, `"bc-mle"`, or `"mir"` |
-| `species` | Optional species filter |
-| `trap` | Optional trap type filter |
+| Argument         | Description                                                                                                      |
+| ---------------- | ---------------------------------------------------------------------------------------------------------------- |
+| `collections`    | Collections data from `getArthroCollections()`                                                                   |
+| `pools`          | Pools data from `getPools()`. Must share overlapping years with collections.                                     |
+| `interval`       | Time interval: `"CollectionDate"`, `"Week"`, `"Biweek"`, or `"Month"`                                            |
+| `target_disease` | Disease acronym (e.g., `"WNV"`). Use `unique(pools$target_acronym)` to see options.                              |
+| `pt_estimate`    | Infection rate estimation method: `"mle"`, `"bc-mle"`, or `"mir"`                                                |
+| `scale`          | Result multiplier for infection rate. Default is `1000`.                                                         |
+| `agency`         | Optional character vector for filtering by agency code                                                           |
+| `species`        | Optional species filter. Use `unique(collections$species_display_name)` to see options. Defaults to all species. |
+| `trap`           | Optional trap type filter. Use `unique(collections$trap_acronym)` to see options. Defaults to all trap types.    |
+| `sex`            | Sex type filter. Defaults to `"female"`.                                                                         |
+| `trapnight_min`  | Minimum trap nights required for a collection to be included. Default is `1`.                                    |
+| `trapnight_max`  | Maximum trap nights allowed. Default is no restriction.                                                          |
+| `separate_by`    | Group results by `"species"`, `"trap"`, or `"agency"`. Default `NULL` does not separate.                         |
 
 **Example**
 

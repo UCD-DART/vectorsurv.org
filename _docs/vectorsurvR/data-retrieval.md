@@ -52,13 +52,15 @@ Returns arthropod collection records for a specified year range and arthropod ty
 getArthroCollections(token, start_year, end_year, arthropod, agency_ids = NULL)
 ```
 
-| Argument | Description |
-|---|---|
-| `token` | Token from `getToken()` |
-| `start_year` | First year of the retrieval range |
-| `end_year` | Last year of the retrieval range |
-| `arthropod` | Type of arthropod: `"mosquito"` or `"tick"` |
-| `agency_ids` | Optional. Numeric vector of agency IDs. Defaults to all agencies on your account. |
+| Argument           | Description                                                                                        |
+| ------------------ | -------------------------------------------------------------------------------------------------- |
+| `token`            | Token from `getToken()`                                                                            |
+| `start_year`       | First year of the retrieval range                                                                  |
+| `end_year`         | Last year of the retrieval range                                                                   |
+| `arthropod`        | Type of arthropod: `"mosquito"` or `"tick"`                                                        |
+| `agency_ids`       | Optional. Numeric vector of agency IDs. Defaults to all agencies on your account.                  |
+| `spatial_features` | Filter data by spatial feature                                                                     |
+| `geocoded`         | Should city and county be calculated by collection long/lat instead of user input from site inform |
 
 **Example**
 
@@ -84,13 +86,13 @@ Returns pool testing records for a specified year range and arthropod type. Pool
 getPools(token, start_year, end_year, arthropod, agency_ids = NULL)
 ```
 
-| Argument | Description |
-|---|---|
-| `token` | Token from `getToken()` |
-| `start_year` | First year of the retrieval range |
-| `end_year` | Last year of the retrieval range |
-| `arthropod` | Type of arthropod: `"mosquito"` or `"tick"` |
-| `agency_ids` | Optional. Numeric vector of agency IDs. |
+| Argument     | Description                                 |
+| ------------ | ------------------------------------------- |
+| `token`      | Token from `getToken()`                     |
+| `start_year` | First year of the retrieval range           |
+| `end_year`   | Last year of the retrieval range            |
+| `arthropod`  | Type of arthropod: `"mosquito"` or `"tick"` |
+| `agency_ids` | Optional. Numeric vector of agency IDs.     |
 
 **Example**
 
@@ -131,9 +133,9 @@ Returns site location information for your agency's monitoring network, includin
 getSites(token, agency_ids = NULL)
 ```
 
-| Argument | Description |
-|---|---|
-| `token` | Token from `getToken()` |
+| Argument     | Description                             |
+| ------------ | --------------------------------------- |
+| `token`      | Token from `getToken()`                 |
 | `agency_ids` | Optional. Numeric vector of agency IDs. |
 
 ---
@@ -146,9 +148,9 @@ Returns custom spatial regions (e.g., zones, districts) defined by your agency t
 getSpatialFeatures(token, agency_ids = NULL)
 ```
 
-| Argument | Description |
-|---|---|
-| `token` | Token from `getToken()` |
+| Argument     | Description                             |
+| ------------ | --------------------------------------- |
+| `token`      | Token from `getToken()`                 |
 | `agency_ids` | Optional. Numeric vector of agency IDs. |
 
 **Example**
