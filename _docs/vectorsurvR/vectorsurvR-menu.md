@@ -33,7 +33,9 @@ Built-in plot functions and custom ggplot2 charts for visualizing surveillance t
 
 Create interactive and static maps of species collection and pool testing data.
 
-### [Sample Report]()
+### [Sample Reports]({{ site.baseurl }}/docs/vectorsurvr/sample-reports)
+
+Downloadable R Markdown reporting templates
 
 ### [Training Videos](https://www.youtube.com/watch?v=2BfMG0P6Ndc)
 

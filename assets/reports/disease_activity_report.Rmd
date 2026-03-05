@@ -1,0 +1,325 @@
+---
+title: "Arbovirus Disease Activity Report"
+subtitle: "Pool Testing Summary — All Diseases"
+date: "`r format(Sys.Date(), '%B %d, %Y')`"
+output:
+  html_document:
+    toc: true
+    toc_float:
+      collapsed: false
+      smooth_scroll: true
+    toc_depth: 3
+    theme: flatly
+    highlight: tango
+  word_document:
+    toc: true
+  pdf_document:
+    toc: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo    = FALSE,
+  message = FALSE,
+  warning = FALSE,
+  fig.height = 5,
+  fig.width  = 8
+)
+```
+
+```{=html}
+<style>
+  body { font-family: 'Source Sans Pro', 'Segoe UI', sans-serif; font-size: 15px; color: #2c3e50; }
+  h1, h2 { color: #1a5276; border-bottom: 2px solid #2e86c1; padding-bottom: 6px; }
+  h3 { color: #2471a3; }
+  .note-box  { background:#eaf4fb; border-left:4px solid #2e86c1; padding:12px 16px; border-radius:4px; margin:15px 0; }
+  .warn-box  { background:#fdedec; border-left:4px solid #e74c3c; padding:12px 16px; border-radius:4px; margin:15px 0; }
+  .stat-row  { display:flex; gap:20px; margin:20px 0; flex-wrap:wrap; }
+  .stat-card { background:#eaf4fb; border-radius:8px; padding:16px 24px; flex:1; min-width:150px; text-align:center; }
+  .stat-card .number { font-size:2em; font-weight:bold; color:#1a5276; }
+  .stat-card .label  { font-size:0.9em; color:#566573; margin-top:4px; }
+  .disease-positive .number { color: #c0392b; }
+</style>
+```
+
+```{r load-packages}
+library(vectorsurvR)
+library(dplyr)
+library(ggplot2)
+library(lubridate)
+library(kableExtra)
+```
+
+```{r config}
+# ── USER CONFIGURATION
+#───────────────────────────────────────
+#
+AGENCY_ID   <- 55     # Your agency ID
+TARGET_YEAR <- 2020   # Surveillance year
+WEEK_START  <- 22     # First epi week of reporting period
+WEEK_END    <- 26     # Last epi week of reporting period
+IS_HTML     <- TRUE   # Set to FALSE when knitting to Word or PDF
+WEEK_SEQ <- as.character(seq(WEEK_START,WEEK_END, by =  1))
+# Diseases to report on — set to NULL to include all diseases in your data
+TARGET_DISEASES <- c("WNV", "SLEV")
+
+# Derived label used throughout the report
+WEEK_LABEL <- paste0("Weeks ", WEEK_START, "\u2013", WEEK_END, ", ", TARGET_YEAR)
+
+# ─────────────────────────────────────────────────────────────────────────────
+```
+
+```{r auth, results='hide'}
+token <- getToken()
+```
+
+```{r load-data, cache=TRUE}
+pools <- getPools(
+  token,
+  start_year = TARGET_YEAR,
+  end_year   = TARGET_YEAR,
+  arthropod  = "mosquito",
+  agency_ids = AGENCY_ID
+) %>%
+  mutate(epiweek = epiweek(as.Date(collection_date)))
+
+# Filter to reporting period
+pools_period <- pools %>%
+  filter(epiweek >= WEEK_START & epiweek <= WEEK_END)
+
+# Apply disease filter if specified, otherwise use all
+if (!is.null(TARGET_DISEASES)) {
+  pools_period <- pools_period %>%
+    filter(test_target_acronym %in% TARGET_DISEASES)
+}
+
+# Diseases present in data
+diseases_present <- sort(unique(pools_period$test_target_acronym))
+```
+
+---
+
+```{r report-subtitle, results='asis'}
+cat(paste0("## Disease Activity Summary — ", WEEK_LABEL))
+```
+
+```{r summary-stats}
+total_pools    <- n_distinct(pools_period$pool_num)
+positive_pools <- pools_period %>%
+  filter(tolower(test_status_name) == "confirmed") %>%
+  n_distinct(.$pool_num)
+total_tested   <- n_distinct(pools_period$pool_num)
+n_diseases     <- n_distinct(pools_period$test_target_acronym)
+```
+
+```{=html}
+<div class="stat-row">
+  <div class="stat-card">
+    <div class="number">`r total_pools`</div>
+    <div class="label">Pools Tested</div>
+  </div>
+  <div class="stat-card">
+    <div class="number">`r n_diseases`</div>
+    <div class="label">Diseases Tested</div>
+  </div>
+  <div class="stat-card disease-positive">
+    <div class="number">`r positive_pools`</div>
+    <div class="label">Positive Pools</div>
+  </div>
+</div>
+```
+
+```{r overall-alert, results='asis'}
+if (IS_HTML) {
+  if (positive_pools > 0) {
+    cat('<div class="warn-box">⚠️ <strong>Arbovirus Activity Detected:</strong>',
+        positive_pools, 'positive pool(s) confirmed in', WEEK_LABEL,
+        '— see per-disease sections below for details.</div>')
+  } else {
+    cat('<div class="note-box">✅ <strong>No positive pools</strong> detected in',
+        WEEK_LABEL, 'across all diseases tested.</div>')
+  }
+} else {
+  if (positive_pools > 0) {
+    cat("> **⚠️ Arbovirus Activity Detected:**", positive_pools,
+        "positive pool(s) confirmed in", WEEK_LABEL)
+  } else {
+    cat("> **✅ No positive pools** detected in", WEEK_LABEL)
+  }
+}
+```
+
+---
+
+## Pool Testing Overview — All Diseases
+
+```{r all-diseases-table}
+pools_period %>%
+  group_by(test_target_acronym) %>%
+  summarise(
+    Pools_Tested  = n_distinct(pool_num),
+    Positive      = sum(tolower(test_status_name) == "confirmed", na.rm = TRUE),
+    Negative      = sum(tolower(test_status_name) == "negative", na.rm = TRUE),
+    Pending       = sum(!tolower(test_status_name) %in% c("confirmed", "negative"), na.rm = TRUE),
+    .groups       = "drop"
+  ) %>%
+  arrange(desc(Positive)) %>%
+  kbl(
+    col.names = c("Disease", "Pools Tested", "Positive", "Negative", "Pending"),
+    caption   = paste("Pool testing summary by disease —", WEEK_LABEL)
+  ) %>%
+  kable_styling(
+    bootstrap_options = c("striped", "hover"),
+    font_size         = 13,
+    latex_options     = "scale_down"
+  ) %>%
+  row_spec(0, bold = TRUE, background = "#2C3E50", color = "white")
+```
+
+---
+
+## Positive Pools by Week
+
+```{r positives-by-week}
+positives_week <- pools_period %>%
+  filter(tolower(test_status_name) == "confirmed") %>%
+  group_by(epiweek, test_target_acronym) %>%
+  summarise(positive_pools = n(), .groups = "drop")
+
+if (nrow(positives_week) > 0) {
+  ggplot(positives_week, aes(x = factor(epiweek), y = positive_pools,
+                              fill = test_target_acronym)) +
+    geom_bar(stat = "identity", position = "dodge") +
+    scale_fill_manual(values = c("#c0392b", "#e67e22", "#8e44ad",
+                                  "#2e86c1", "#1a5276", "#117a65")) +
+    labs(
+      title = paste("Positive Pools by Week —", WEEK_LABEL),
+      x     = "Epi Week",
+      y     = "Positive Pools",
+      fill  = "Disease"
+    ) +
+    theme_minimal(base_size = 13) +
+    theme(plot.title = element_text(face = "bold", color = "#1a5276"))
+} else {
+  cat("No positive pools detected in this reporting period.")
+}
+```
+
+---
+
+## Per-Disease Sections
+
+```{r per-disease, results='asis'}
+for (disease in diseases_present) {
+
+  cat(paste0("\n\n### ", disease, "\n\n"))
+
+  disease_pools <- pools_period %>%
+    filter(test_target_acronym == disease)
+
+  n_tested   <- n_distinct(disease_pools$pool_num)
+  n_positive <- disease_pools %>%
+    filter(tolower(test_status_name) == "confirmed") %>% nrow()
+
+  cat(paste0("**", n_tested, "** pools tested &nbsp;|&nbsp; **", n_positive,
+             "** positive\n\n"))
+
+  # Infection rate table
+  ir <- tryCatch(
+    getInfectionRate(
+      pools          = pools,
+      interval       = "Week",
+      target_year    = TARGET_YEAR,
+      target_disease = disease,
+      pt_estimate    = "mle",
+      scale          = 1000
+    ) %>% filter(Week >= WEEK_START & Week <= WEEK_END),
+    error = function(e) NULL
+  )
+
+  if (!is.null(ir) && nrow(ir) > 0) {
+    print(
+      ir %>%
+        kbl(caption = paste(disease, "infection rate (per 1,000) —", WEEK_LABEL)) %>%
+        kable_styling(
+          bootstrap_options = c("striped", "hover"),
+          font_size         = 13,
+          latex_options     = "scale_down"
+        ) %>%
+        row_spec(0, bold = TRUE, background = "#2C3E50", color = "white")
+    )
+  }
+
+  cat("\n\n")
+
+  # Positive pool detail table
+  positives <- disease_pools %>%
+    filter(tolower(test_status_name) == "confirmed")
+
+  if (nrow(positives) > 0) {
+    print(
+      positives %>%
+        select(collection_date, site_code, species_display_name,
+               num_count, trap_acronym, epiweek) %>%
+        arrange(epiweek, collection_date) %>%
+        kbl(
+          col.names = c("Date", "Site", "Species", "Mosquitoes", "Trap", "Epi Week"),
+          caption   = paste(disease, "confirmed positive pools —", WEEK_LABEL)
+        ) %>%
+        kable_styling(
+          bootstrap_options = c("striped", "hover"),
+          font_size         = 13,
+          latex_options     = "scale_down"
+        ) %>%
+        row_spec(0, bold = TRUE, background = "#c0392b", color = "white")
+    )
+  } else {
+    cat(paste0("No ", disease, " positive pools detected in ", WEEK_LABEL, ".\n\n"))
+  }
+
+  # Pool testing map
+  plotPoolsMap(
+      token          = token,
+      target_year    = TARGET_YEAR,
+      target_disease = disease,
+      interval       = "Week",
+      time_period    = WEEK_SEQ,
+      agency_ids     = AGENCY_ID,
+      html           = IS_HTML
+    )
+   
+}
+```
+
+## Summary
+
+```{r written-summary, results='asis'}
+disease_summary <- pools_period %>%
+  filter(tolower(test_status_name) == "confirmed") %>%
+  group_by(test_target_acronym) %>%
+  summarise(n = n(), .groups = "drop") %>%
+  arrange(desc(n))
+
+if (nrow(disease_summary) > 0) {
+  disease_text <- paste(
+    paste0(disease_summary$test_target_acronym, " (", disease_summary$n, ")"),
+    collapse = ", "
+  )
+  cat(paste0(
+    "During **", WEEK_LABEL, "**, a total of **", total_pools,
+    " pools** were submitted for testing across **", n_diseases, " diseases**. ",
+    "**", positive_pools, " positive pool(s)** were confirmed: ", disease_text, ". ",
+    "Refer to the per-disease sections above for infection rate estimates and site-level detail."
+  ))
+} else {
+  cat(paste0(
+    "During **", WEEK_LABEL, "**, a total of **", total_pools,
+    " pools** were submitted for testing across **", n_diseases, " diseases**. ",
+    "**No positive pools** were detected in this reporting period."
+  ))
+}
+```
+
+---
+
+*Report generated using the `vectorsurvR` package. Data sourced from the VectorSurv Gateway.*

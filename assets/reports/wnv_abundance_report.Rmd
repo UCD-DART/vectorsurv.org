@@ -1,0 +1,397 @@
+---
+title: "Mosquito Surveillance Report"
+subtitle: "Abundance & West Nile Virus Activity — Weeks 22-26"
+date: "`r format(Sys.Date(), '%B %d, %Y')`"
+output:
+  html_document:
+    toc: true
+    toc_float:
+      collapsed: false
+      smooth_scroll: true
+    toc_depth: 3
+    theme: flatly
+    highlight: tango
+  word_document:
+    toc: true
+  pdf_document:
+    toc: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo    = FALSE,
+  message = FALSE,
+  warning = FALSE,
+  fig.height = 5,
+  fig.width  = 8
+)
+```
+
+```{=html}
+<style>
+  body { font-family: 'Source Sans Pro', 'Segoe UI', sans-serif; font-size: 15px; color: #2c3e50; }
+  h1, h2 { color: #1a5276; border-bottom: 2px solid #2e86c1; padding-bottom: 6px; }
+  h3 { color: #2471a3; }
+  .note-box  { background:#eaf4fb; border-left:4px solid #2e86c1; padding:12px 16px; border-radius:4px; margin:15px 0; }
+  .warn-box  { background:#fdedec; border-left:4px solid #e74c3c; padding:12px 16px; border-radius:4px; margin:15px 0; }
+  .stat-row  { display:flex; gap:20px; margin:20px 0; flex-wrap:wrap; }
+  .stat-card { background:#eaf4fb; border-radius:8px; padding:16px 24px; flex:1; min-width:150px; text-align:center; }
+  .stat-card .number { font-size:2em; font-weight:bold; color:#1a5276; }
+  .stat-card .label  { font-size:0.9em; color:#566573; margin-top:4px; }
+</style>
+```
+
+```{r load-packages}
+library(vectorsurvR)
+library(dplyr)
+library(ggplot2)
+library(lubridate)
+library(kableExtra)
+```
+
+```{r config}
+# ── USER CONFIGURATION ────────────────────────────────────────────────────────
+# Update these values to run the report for your agency and time period
+
+AGENCY_ID  <- 55      # Your agency ID
+TARGET_YEAR <- 2020   # Surveillance year
+WEEK_START  <- 22     # First epi week of reporting period
+WEEK_END    <- 26     # Last epi week of reporting period
+IS_HTML     <- TRUE   # Set to FALSE when knitting to Word or PDF
+
+WEEK_SEQ <- as.character(seq(WEEK_START,WEEK_END, by =  1))
+
+# WNV primary vector species for your region — adjust as needed
+WNV_SPECIES <- c("Cx tarsalis", "Cx pipiens")
+
+# Derived label used in headings and captions throughout the report
+WEEK_LABEL <- paste0("Weeks ", WEEK_START, "\u2013", WEEK_END, ", ", TARGET_YEAR)
+
+# ─────────────────────────────────────────────────────────────────────────────
+```
+
+```{r auth, results='hide'}
+token <- getToken()
+```
+
+```{r load-data, cache=TRUE}
+# Collections: pull 5+ years for anomaly comparison
+collections_full <- getArthroCollections(
+  token,
+  start_year = TARGET_YEAR - 5,
+  end_year   = TARGET_YEAR,
+  arthropod  = "mosquito",
+  agency_ids = AGENCY_ID
+)
+
+# Current year with epiweek column
+collections_year <- collections_full %>%
+  filter(year(as.Date(collection_date)) == TARGET_YEAR) %>%
+  mutate(epiweek = epiweek(as.Date(collection_date)))
+
+# Filter to reporting week range
+collections_period <- collections_year %>%
+  filter(epiweek >= WEEK_START & epiweek <= WEEK_END)
+
+# Pools data
+pools <- getPools(
+  token,
+  start_year = TARGET_YEAR,
+  end_year   = TARGET_YEAR,
+  arthropod  = "mosquito",
+  agency_ids = AGENCY_ID
+)
+
+# Filter pools to reporting week range
+pools_period <- pools %>%
+  mutate(epiweek = epiweek(as.Date(collection_date))) %>%
+  filter(epiweek >= WEEK_START & epiweek <= WEEK_END)
+```
+
+---
+
+## Overview
+
+This report summarizes mosquito surveillance activity and West Nile Virus (WNV) pool testing results for **`r WEEK_LABEL`**. Data reflects collections and pool tests submitted through the VectorSurv Gateway for the reporting agency.
+
+```{r summary-stats}
+total_mosquitoes  <- sum(collections_period$num_count, na.rm = TRUE)
+total_collections <- n_distinct(collections_period$collection_id)
+total_pools       <- n_distinct(pools_period$pool_num)
+positive_pools    <- pools_period %>%
+  filter(tolower(test_status_name) == "confirmed") %>% nrow()
+n_species         <- n_distinct(collections_period$species_display_name)
+```
+
+```{=html}
+<div class="stat-row">
+  <div class="stat-card">
+    <div class="number">`r format(total_mosquitoes, big.mark=",")`</div>
+    <div class="label">Mosquitoes Collected</div>
+  </div>
+  <div class="stat-card">
+    <div class="number">`r total_collections`</div>
+    <div class="label">Collection Events</div>
+  </div>
+  <div class="stat-card">
+    <div class="number">`r n_species`</div>
+    <div class="label">Species Detected</div>
+  </div>
+  <div class="stat-card">
+    <div class="number">`r total_pools`</div>
+    <div class="label">Pools Tested</div>
+  </div>
+  <div class="stat-card">
+    <div class="number">`r positive_pools`</div>
+    <div class="label">WNV Positive Pools</div>
+  </div>
+</div>
+```
+
+```{r wnv-alert, results='asis'}
+if (IS_HTML) {
+  if (positive_pools > 0) {
+    cat('<div class="warn-box">⚠️ <strong>WNV Activity Detected:</strong>',
+        positive_pools, 'positive pool(s) confirmed in', WEEK_LABEL,
+        '— see the WNV Activity section for details.</div>')
+  } else {
+    cat('<div class="note-box">✅ <strong>No WNV positives</strong> detected in',
+        WEEK_LABEL, 'pool testing.</div>')
+  }
+} else {
+  if (positive_pools > 0) {
+    cat("> **⚠️ WNV Activity Detected:**", positive_pools,
+        "positive pool(s) confirmed in", WEEK_LABEL)
+  } else {
+    cat("> **✅ No WNV positives** detected in", WEEK_LABEL)
+  }
+}
+```
+
+---
+
+## Mosquito Abundance
+
+### Abundance by Week — `r WEEK_LABEL`
+
+Abundance is expressed as the average number of mosquitoes caught per trap night.
+
+```{r abundance-table}
+getAbundance(
+  collections = collections_year,
+  interval    = "Week",
+  species     = WNV_SPECIES,
+  separate_by = "species"
+) %>%
+  filter(Week >= WEEK_START & Week <= WEEK_END) %>%
+  kbl(caption = paste("Table 1: Weekly abundance for primary WNV vector species —", WEEK_LABEL)) %>%
+  kable_styling(
+    bootstrap_options = c("striped", "hover"),
+    font_size         = 13,
+    latex_options     = "scale_down"
+  ) %>%
+  row_spec(0, bold = TRUE, background = "#2C3E50", color = "white")
+```
+
+---
+
+### Abundance Trend — `r TARGET_YEAR` vs. 5-Year Average
+
+The charts below compare `r TARGET_YEAR` weekly abundance against the historical average for each primary vector species.
+
+```{r abundance-anomaly-plot}
+for (sp in WNV_SPECIES) {
+  p <- plotVectorAbundance(
+    token       = token,
+    interval    = "Week",
+    target_year = TARGET_YEAR,
+    start_year  = TARGET_YEAR - 5,
+    end_year    = TARGET_YEAR,
+    species     = sp,
+    trap        = NULL,
+    agency_ids  = AGENCY_ID
+  )
+  print(p)
+}
+```
+
+---
+
+### Species Composition — `r WEEK_LABEL`
+
+```{r species-composition}
+species_summary <- collections_period %>%
+  filter(species_display_name %in% WNV_SPECIES) %>%
+  group_by(species_display_name) %>%
+  summarise(
+    total_count = sum(num_count, na.rm = TRUE),
+    .groups     = "drop"
+  ) %>%
+  arrange(desc(total_count)) %>%
+  mutate(pct = round(total_count / sum(total_count) * 100, 1))
+
+ggplot(species_summary, aes(x = reorder(species_display_name, total_count),
+                             y = total_count, fill = species_display_name)) +
+  geom_bar(stat = "identity", show.legend = FALSE, width = 0.6) +
+  geom_text(aes(label = paste0(pct, "%")), hjust = -0.2, size = 3.5, color = "#2c3e50") +
+  coord_flip() +
+  scale_fill_manual(values = c("#2e86c1", "#1a5276", "#5dade2")) +
+  scale_y_continuous(expand = expansion(mult = c(0, 0.15))) +
+  labs(
+    title   = paste("Species Composition —", WEEK_LABEL),
+    x       = NULL,
+    y       = "Total Mosquitoes Collected",
+    caption = "Primary WNV vector species only"
+  ) +
+  theme_minimal(base_size = 13) +
+  theme(
+    plot.title         = element_text(face = "bold", color = "#1a5276"),
+    axis.text.y        = element_text(face = "italic"),
+    panel.grid.major.y = element_blank()
+  )
+```
+
+---
+
+### Collection Map — `r WEEK_LABEL`
+
+```{r species-map}
+ plotSpeciesMap(
+    token       = token,
+    target_year = TARGET_YEAR,
+    interval    = "Week",
+    time_period = WEEK_SEQ,
+    species     = WNV_SPECIES,
+    agency_ids  = AGENCY_ID,
+    html        = IS_HTML
+  )
+
+```
+
+---
+
+## West Nile Virus Activity
+
+### Infection Rate — `r WEEK_LABEL`
+
+Infection rate is estimated using maximum likelihood estimation (MLE), expressed per 1,000 mosquitoes tested.
+
+```{r infection-rate}
+getInfectionRate(
+  pools,
+  interval       = "Week",
+  target_disease = "WNV",
+  pt_estimate    = "mle",
+  scale          = 1000,
+  species        = WNV_SPECIES
+) %>%
+  filter(Week >= WEEK_START & Week <= WEEK_END) %>%
+  kbl(caption = paste("Table 2: WNV infection rate —", WEEK_LABEL)) %>%
+  kable_styling(
+    bootstrap_options = c("striped", "hover"),
+    font_size         = 13,
+    latex_options     = "scale_down"
+  ) %>%
+  row_spec(0, bold = TRUE, background = "#2C3E50", color = "white")
+```
+
+---
+
+### Vector Index — `r WEEK_LABEL`
+
+The vector index combines abundance and infection rate to estimate the relative risk of WNV transmission.
+
+$$\text{Vector Index} = \text{Abundance} \times \text{Infection Rate}$$
+
+```{r vector-index}
+getVectorIndex(
+  collections_year,
+  pools,
+  interval       = "Week",
+  target_disease = "WNV",
+  pt_estimate    = "bc-mle",
+  species        = WNV_SPECIES
+) %>%
+  filter(Week >= WEEK_START & Week <= WEEK_END) %>%
+  kbl(caption = paste("Table 3: Vector index —", WEEK_LABEL)) %>%
+  kable_styling(
+    bootstrap_options = c("striped", "hover"),
+    font_size         = 13,
+    latex_options     = "scale_down"
+  ) %>%
+  row_spec(0, bold = TRUE, background = "#2C3E50", color = "white")
+```
+
+---
+
+### Pool Testing Map — `r WEEK_LABEL`
+
+Positive pools are shown in red; negative pools in blue.
+
+```{r pools-map}
+plotPoolsMap(
+    token          = token,
+    target_year    = TARGET_YEAR,
+    interval= "Week",
+    target_disease = "WNV",
+    time_period    = WEEK_SEQ,
+    agency_ids     = AGENCY_ID,
+    html           = IS_HTML
+  )
+
+
+```
+
+---
+
+### WNV Positive Pool Summary
+
+```{r positive-pools-table}
+if (positive_pools > 0) {
+  pools_period %>%
+    filter(tolower(test_status_name) == "confirmed") %>%
+    select(collection_date, site_code,
+           species_display_name, num_count, trap_acronym, epiweek) %>%
+    arrange(epiweek, collection_date) %>%
+    kbl(
+      col.names = c("Date", "Site", "Species", "Mosquitoes", "Trap", "Epi Week"),
+      caption   = paste("Table 4: WNV confirmed positive pools —", WEEK_LABEL)
+    ) %>%
+    kable_styling(
+      bootstrap_options = c("striped", "hover"),
+      font_size         = 13,
+      latex_options     = "scale_down"
+    ) %>%
+    row_spec(0, bold = TRUE, background = "#c0392b", color = "white")
+} else {
+  cat("No WNV positive pools were detected in", WEEK_LABEL, ".")
+}
+```
+
+---
+
+## Summary
+
+```{r written-summary, results='asis'}
+wnv_status <- if (positive_pools > 0) {
+  paste0("**WNV activity was detected**, with ", positive_pools,
+         " confirmed positive pool(s) submitted during this period.")
+} else {
+  "**No WNV positive pools** were detected during this period."
+}
+
+top_species <- species_summary %>% slice_max(total_count, n = 1) %>% pull(species_display_name)
+
+cat(paste0(
+  "During **", WEEK_LABEL, "**, surveillance activities recorded **",
+  format(total_mosquitoes, big.mark = ","), " mosquitoes** across **", total_collections,
+  " collection events**, representing **", n_species, " species**. ",
+  "The most abundant WNV vector species was *", top_species, "*. ",
+  wnv_status, " A total of **", total_pools, " pools** were submitted for testing. ",
+  "Refer to the maps and charts above for spatial and temporal distribution details."
+))
+```
+
+---
+
+*Report generated using the `vectorsurvR` package. Data sourced from the VectorSurv Gateway.*
