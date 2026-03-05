@@ -12,6 +12,10 @@ collections:
   policy:
     permalink: "/:collection/:name/"
     output: true
+  vector_control_tools:
+    permalink: "/:collection/:name/"
+    output: true
+
 
 defaults:
   - scope:
@@ -28,7 +32,7 @@ defaults:
       type: posts
     values:
       layout: post
-
+    
 exclude:
   - README.md
   - .gitignore

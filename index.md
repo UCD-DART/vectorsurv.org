@@ -73,14 +73,14 @@
         <figure>
           <img src="/assets/images/mapicon.png" alt="icon of map of US">
         </figure>
-        <h2> 35 </h2>
+        <h2> 36 </h2>
         <h3> states and territories </h3>
     </div>
     <div class= "box3">
         <figure>
           <img src="/assets/images/enterprise.png" alt="icon of agency">
         </figure>
-        <h2> 380+ </h2>
+        <h2> 390+ </h2>
         <h3> agencies </h3>
     </div>
     <div class= "box3">
