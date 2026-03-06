@@ -82,6 +82,9 @@
         - link: /docs/resistance/bottle-bioassay/
         - link: /docs/resistance/bioassay-manage/
         - link: /docs/resistance/bioassay-calculator/
+    - link: /docs/resistance/v5/v5-menu/
+      docs:
+        - link: /docs/resistance/v5/bottle-bioassay/
 - title: Service Visit
   link: /docs/service-visit/service-visit-menu/
   docs:
