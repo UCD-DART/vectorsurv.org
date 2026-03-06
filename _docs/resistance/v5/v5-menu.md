@@ -14,3 +14,7 @@ Enter bottle bioassay test results.
 ### [Bottle Bioassay Management]({{ site.baseur1 }}/docs/resistance/v5/bottle-bioassay/manage)
 
 View and edit saved bottle bioassay records.
+
+### [Bottle Bioassay Calculator]({{ site.baseurl }}/docs/resistance/bioassay-calculator)
+
+Estimate survival curves from bottle bioassay results

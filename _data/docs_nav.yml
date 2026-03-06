@@ -85,6 +85,7 @@
     - link: /docs/resistance/v5/v5-menu/
       docs:
         - link: /docs/resistance/v5/bottle-bioassay/
+        - link: /docs/resistance/v5/bioassay-calculator/
 - title: Service Visit
   link: /docs/service-visit/service-visit-menu/
   docs:
@@ -110,6 +111,7 @@
     - link: /docs/tools/v5/v5-menu/
       docs:
         - link: /docs/tools/v5/tick-anomaly/
+        - link: /docs/resistance/v5/bioassay-calculator/
 - title: Issues
   link: /docs/issues/
 - title: Settings
