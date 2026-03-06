@@ -11,6 +11,8 @@ Use these calculators to estimate arbovirus risk.
 
 ### [Tick Abundance Anomaly]({{ site.baseurl }}/docs/tools/v5/calculators/tick-anomaly)
 
+### [Bottle Bioassay]({{ site.baseurl }}/docs/resistance/v5/bioassay-calculator/)
+
 ## Aggregate Reports
 
 Quickly generate reports from your agency or from multiple agencies to compare arbovirus activity.
