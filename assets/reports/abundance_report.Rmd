@@ -1,0 +1,232 @@
+---
+title: "Mosquito Abundance Report"
+subtitle: "Weekly Surveillance Summary"
+date: "`r format(Sys.Date(), '%B %d, %Y')`"
+output:
+  html_document:
+    toc: true
+    toc_float:
+      collapsed: false
+      smooth_scroll: true
+    toc_depth: 3
+    theme: flatly
+    highlight: tango
+  word_document:
+    toc: true
+  pdf_document:
+    toc: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo    = FALSE,
+  message = FALSE,
+  warning = FALSE,
+  fig.height = 5,
+  fig.width  = 8
+)
+```
+
+```{=html}
+<style>
+  body { font-family: 'Source Sans Pro', 'Segoe UI', sans-serif; font-size: 15px; color: #2c3e50; }
+  h1, h2 { color: #1a5276; border-bottom: 2px solid #2e86c1; padding-bottom: 6px; }
+  h3 { color: #2471a3; }
+  .stat-row  { display:flex; gap:20px; margin:20px 0; flex-wrap:wrap; }
+  .stat-card { background:#eaf4fb; border-radius:8px; padding:16px 24px; flex:1; min-width:150px; text-align:center; }
+  .stat-card .number { font-size:2em; font-weight:bold; color:#1a5276; }
+  .stat-card .label  { font-size:0.9em; color:#566573; margin-top:4px; }
+</style>
+```
+
+```{r load-packages}
+library(vectorsurvR)
+library(dplyr)
+library(ggplot2)
+library(lubridate)
+library(kableExtra)
+```
+
+```{r config}
+# ── USER CONFIGURATION ────────────────────────────────────────────────────────
+
+AGENCY_ID   <- 55     # Your agency ID
+TARGET_YEAR <- 2020   # Surveillance year
+WEEK_START  <- 22     # First epi week of reporting period
+WEEK_END    <- 26     # Last epi week of reporting period
+IS_HTML     <- TRUE   # Set to FALSE when knitting to Word or PDF
+
+# Species to include — adjust for your region
+SPECIES <- c("Cx tarsalis", "Cx pipiens")
+
+# Derived label used throughout the report
+WEEK_LABEL <- paste0("Weeks ", WEEK_START, "\u2013", WEEK_END, ", ", TARGET_YEAR)
+
+# Vector of weeks for map functions
+WEEK_SEQ <- as.character(seq(WEEK_START,WEEK_END,1))
+
+# ─────────────────────────────────────────────────────────────────────────────
+```
+
+```{r auth, results='hide'}
+token <- getToken()
+```
+
+```{r load-data, cache=TRUE}
+# Pull 5+ years for trend comparison
+collections_full <- getArthroCollections(
+  token,
+  start_year = TARGET_YEAR - 5,
+  end_year   = TARGET_YEAR,
+  arthropod  = "mosquito",
+  agency_ids = AGENCY_ID
+)
+
+# Current year with epiweek
+collections_year <- collections_full %>%
+  filter(year(as.Date(collection_date)) == TARGET_YEAR) %>%
+  mutate(epiweek = epiweek(as.Date(collection_date)))
+
+# Filter to reporting period
+collections_period <- collections_year %>%
+  filter(epiweek >= WEEK_START & epiweek <= WEEK_END)
+```
+
+---
+
+```{r report-subtitle, results='asis'}
+cat(paste0("## Abundance Summary — ", WEEK_LABEL))
+```
+
+```{r summary-stats}
+total_mosquitoes  <- sum(collections_period$num_count, na.rm = TRUE)
+total_collections <- n_distinct(collections_period$collection_id)
+n_species         <- n_distinct(collections_period$species_display_name)
+```
+
+```{=html}
+<div class="stat-row">
+  <div class="stat-card">
+    <div class="number">`r format(total_mosquitoes, big.mark=",")`</div>
+    <div class="label">Mosquitoes Collected</div>
+  </div>
+  <div class="stat-card">
+    <div class="number">`r total_collections`</div>
+    <div class="label">Collection Events</div>
+  </div>
+  <div class="stat-card">
+    <div class="number">`r n_species`</div>
+    <div class="label">Species Detected</div>
+  </div>
+</div>
+```
+
+---
+
+## Abundance by Week
+
+```{r abundance-table}
+getAbundance(
+  collections = collections_year,
+  interval    = "Week",
+  species     = SPECIES,
+  separate_by = "species"
+) %>%
+  filter(Week >= WEEK_START & Week <= WEEK_END) %>%
+  kbl(caption = paste("Weekly abundance —", WEEK_LABEL)) %>%
+  kable_styling(
+    bootstrap_options = c("striped", "hover"),
+    font_size         = 13,
+    latex_options     = "scale_down"
+  ) %>%
+  row_spec(0, bold = TRUE, background = "#2C3E50", color = "white")
+```
+
+---
+
+## Abundance Trend — `r TARGET_YEAR` vs. 5-Year Average
+
+```{r abundance-trend}
+for (sp in SPECIES) {
+  p <- plotVectorAbundance(
+    token       = token,
+    interval    = "Week",
+    target_year = TARGET_YEAR,
+    start_year  = TARGET_YEAR - 5,
+    end_year    = TARGET_YEAR,
+    species     = sp,
+    trap        = NULL,
+    agency_ids  = AGENCY_ID
+  )
+  print(p)
+}
+```
+
+---
+
+## Species Composition — `r WEEK_LABEL`
+
+```{r species-composition}
+species_summary <- collections_period %>%
+  filter(species_display_name %in% SPECIES) %>%
+  group_by(species_display_name) %>%
+  summarise(total_count = sum(num_count, na.rm = TRUE), .groups = "drop") %>%
+  arrange(desc(total_count)) %>%
+  mutate(pct = round(total_count / sum(total_count) * 100, 1))
+
+ggplot(species_summary, aes(x = reorder(species_display_name, total_count),
+                             y = total_count, fill = species_display_name)) +
+  geom_bar(stat = "identity", show.legend = FALSE, width = 0.6) +
+  geom_text(aes(label = paste0(pct, "%")), hjust = -0.2, size = 3.5, color = "#2c3e50") +
+  coord_flip() +
+  scale_fill_manual(values = c("#2e86c1", "#1a5276", "#5dade2", "#85c1e9", "#1f618d")) +
+  scale_y_continuous(expand = expansion(mult = c(0, 0.15))) +
+  labs(
+    title = paste("Species Composition —", WEEK_LABEL),
+    x     = NULL,
+    y     = "Total Mosquitoes Collected"
+  ) +
+  theme_minimal(base_size = 13) +
+  theme(
+    plot.title         = element_text(face = "bold", color = "#1a5276"),
+    axis.text.y        = element_text(face = "italic"),
+    panel.grid.major.y = element_blank()
+  )
+```
+
+---
+
+## Collection Map — `r WEEK_LABEL`
+
+```{r species-map}
+ plotSpeciesMap(
+    token       = token,
+    target_year = TARGET_YEAR,
+    interval    = "Week",
+    time_period = WEEK_SEQ,
+    species     = SPECIES,
+    agency_ids  = AGENCY_ID,
+    html        = IS_HTML
+  )
+ 
+```
+
+---
+
+## Summary
+
+```{r written-summary, results='asis'}
+top_species <- species_summary %>% slice_max(total_count, n = 1) %>% pull(species_display_name)
+
+cat(paste0(
+  "During **", WEEK_LABEL, "**, surveillance activities recorded **",
+  format(total_mosquitoes, big.mark = ","), " mosquitoes** across **",
+  total_collections, " collection events**, representing **", n_species, " species**. ",
+  "The most abundant species was *", top_species, "*. ",
+  "Refer to the maps and charts above for spatial and temporal distribution details."
+))
+```
+
+---
+
+*Report generated using the `vectorsurvR` package. Data sourced from the VectorSurv Gateway.*

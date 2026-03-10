@@ -56,6 +56,9 @@ permalink: /docs/
         <li>
             <a class="linkclass" href="{{ site.baseurl }}/docs/vectorsurv-api/">API</a>
         </li>
+         <li>
+            <a class="linkclass" href="{{ site.baseurl }}/docs/vectorsurvR/">vectorsurvR</a>
+        </li>
     </div>
 </div>
 
