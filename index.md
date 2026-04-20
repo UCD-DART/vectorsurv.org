@@ -97,6 +97,16 @@
         <h2> We have users in: </h2>
         <article>
             <details>
+                <summary>Alabama</summary>
+                <p>
+                  <ul>
+                    <li>
+                        <a href="https://www.alabamapublichealth.gov/mosquito/" target="_blank">Alabama Public Health, Mosquito-borne Diseases</a>
+                    </li>
+                  </ul>
+                </p>
+            </details>
+            <details>
                 <summary>Arizona</summary>
                 <p>
                 <ul>
@@ -142,6 +152,19 @@
                 </p>
             </details>
             <details>
+                <summary>Delaware</summary>
+                <p>
+                  <ul>
+                    <li>
+                        <a href="https://dnrec.delaware.gov/fish-wildlife/mosquito-control/" target="_blank">Delaware Department of Natural Resources and Environmental Control, Mosquito Control Section</a>
+                    </li>
+                    <li>
+                        <a href="https://dhss.delaware.gov/dph/epi/vectordisease/" target="_blank">Delaware Department of Health and Social Services, Vector-Borne Diseases</a>
+                    </li>
+                  </ul>
+                </p>
+            </details>
+            <details>
               <summary>Florida</summary>
               <p>
                 <ul>
@@ -153,6 +176,16 @@
                   </li>
                 </ul>
               </p>
+            </details>
+            <details>
+                <summary>Georgia</summary>
+                <p>
+                  <ul>
+                    <li>
+                        <a href="https://dph.georgia.gov/epidemiology/zvbd" target="_blank">Georgia Department of Public Health, Zoonotic and Vector-borne Diseases</a>
+                    </li>
+                  </ul>
+                </p>
             </details>
             <details>
                 <summary>Hawaii</summary>
