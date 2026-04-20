@@ -1,5 +1,5 @@
 ---
-title: Service Visit Management
+title: Manage Service Visits
 v5: true
 gateway-url: https://gateway.vectorsurv.org/v5/servicevisit/manage
 ---
