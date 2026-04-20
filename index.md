@@ -250,7 +250,7 @@
               <p>
                 <ul>
                   <li>
-                    <a href="https://www.maine.gov/dhhs/mecdc/infectious-disease/epi/vector-borne/mosquito/mosquito-prevention-and-property-management.shtml" target="_blank">Maine Center for Disease Control & Prevention</a>
+                    <a href="https://www.maine.gov/dhhs/mecdc/diseases-conditions/insect-borne-diseases" target="_blank">Maine Center for Disease Control & Prevention</a>
                   </li>
                 </ul>
               </p>
@@ -339,7 +339,7 @@
                 <p>
                  <ul>
                     <li>
-                        <a href="https://www.health.nd.gov/wnv/west-nile-virus-about" target="_blank">North Dakota Department of Health</a>
+                        <a href="https://www.hhs.nd.gov/" target="_blank">North Dakota Department of Health</a>
                     </li>
                   </ul>
                 </p>
@@ -379,7 +379,7 @@
                 <p>
                   <ul>
                     <li>
-                        <a href="https://doh.sd.gov/diseases/infectious/wnv/" target="_blank">South Dakota Department of Health</a>
+                        <a href="https://doh.sd.gov/topics/diseases/infectious-diseases/vector-borne-diseases/" target="_blank">South Dakota Department of Health</a>
                     </li>
                   </ul>
                 </p>
@@ -389,7 +389,7 @@
                 <p>
                   <ul>
                     <li>
-                        <a href="https://www.tn.gov/health/cedep/vector-borne-diseases.html" target="_blank">Tennessee Department of Health</a>
+                        <a href="https://www.tn.gov/health/vector.html" target="_blank">Tennessee Department of Health</a>
                     </li>
                   </ul>
                 </p>
@@ -434,7 +434,7 @@
                 <p>
                   <ul>
                     <li>
-                        <a href="https://epi.health.utah.gov/animal-insect-related/" target="_blank" href="#">Utah Department of Health</a>
+                        <a href="https://epi.utah.gov/west-nile-virus/" target="_blank" href="#">Utah Department of Health</a>
                     </li>
                     <li>
                         <a href="https://www.umaa.org/" target="_blank">Utah Mosquito Abatement Association</a>
@@ -447,7 +447,7 @@
                 <p>
                   <ul>
                     <li>
-                        <a href="https://www.vdh.virginia.gov/environmental-epidemiology/bugs-human-health/" target="_blank">Virginia Department of Health</a>
+                        <a href="https://www.vdh.virginia.gov/mosquitoes/" target="_blank">Virginia Department of Health</a>
                     </li>
                   </ul>
                 </p>
