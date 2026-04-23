@@ -67,9 +67,24 @@
 - title: Application
   link: /docs/application/application-menu/
   docs:
-    - link: /docs/application/application/
-    - link: /docs/application/source/
-    - link: /docs/application/config/
+    - link: /docs/application/v5/v5-menu/
+      docs:
+        - link: /docs/application/v5/application/
+        - link: /docs/application/v5/application-manage/
+        - link: /docs/application/v5/source/
+        - link: /docs/application/v5/config/config/
+          docs:
+            - link: /docs/application/v5/config/equipment/
+            - link: /docs/application/v5/config/equipment-manage/
+            - link: /docs/application/v5/config/technician/
+            - link: /docs/application/v5/config/technician-manage/
+            - link: /docs/application/v5/config/mix/
+            - link: /docs/application/v5/config/mix-manage/
+    - link: /docs/application/application-menu-legacy/
+      docs:
+        - link: /docs/application/application/
+        - link: /docs/application/source/
+        - link: /docs/application/config/
 - title: Resistance
   link: /docs/resistance/resistance-menu/
   docs:
