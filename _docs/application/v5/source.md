@@ -17,7 +17,7 @@ Sources allow you to bookmark locations that are regularly treated, saving time 
 - **Source Name**: (Recommended) A descriptive name to help identify the location easily. Both the **Source Code** and **Source Name** are searchable and will autocomplete on data entry pages.
 - **Address**: The specific address or nearest intersection to the source.
 - **Waters of the US**: Check this box if the source is classified as a "Waters of the US" location.
-  - **Affected Waters**: This field appears only when _Waters of the US_ is selected. Use it to record the names of any relevant water bodies.
+  - **Affected Waters**: This field appears only when _Waters of the US_ is selected. Use it to record the names of any affected water bodies.
 - **Comments**: Any additional notes or specific instructions to be recorded with this source.
 - **Source Shape**: Define the spatial location of the source using the map interface:
   - **Geocoding**: Use the address geolocation field on the right side of the map to automatically plot the point.
