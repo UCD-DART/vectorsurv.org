@@ -29,18 +29,32 @@
                 <div class="v5-badge">v5</div>
                 {% endif %}
                 <ul class="innerNav">
-                  {% for item2 in item.docs %} {% assign p = site.documents |
+                  {% for item2 in item.docs %} {% assign p2 = site.documents |
                   where: "url", item2.link | first %}
-                  <li {%- if page.url=="p.url" %} class="current" {%- endif %}>
-                    <a class="item" href="{{ p.url }}">
-                      {%- if page.url == p.url %}<span class="current"></span
-                      >{%- endif %} {{ p.menu_name | default: p.title }}
+                  <li {%- if page.url == p2.url %} class="current" {%- endif %}>
+                    <a class="item" href="{{ p2.url }}">
+                      {%- if page.url == p2.url %}<span class="current"></span>{%- endif %} {{ p2.menu_name | default: p2.title }}
                     </a>
-                    {% if p.v5 %}
+                    {% if p2.v5 %}
                     <div class="v5-badge">v5</div>
                     {% endif %}
+                    {% if item2.docs and item2.docs.size > 0 %}
+                    <ul class="innerNav">
+                      {% for item3 in item2.docs %} {% assign p3 = site.documents |
+                      where: "url", item3.link | first %}
+                      <li {%- if page.url == p3.url %} class="current" {%- endif %}>
+                        <a class="item" href="{{ p3.url }}">
+                          {%- if page.url == p3.url %}<span class="current"></span>{%- endif %} {{ p3.menu_name | default: p3.title }}
+                        </a>
+                        {% if p3.v5 %}
+                        <div class="v5-badge">v5</div>
+                        {% endif %}
+                      </li>
+                      {% endfor %}
+                    </ul>
+                    {% endif %}
                   </li>
-                    {% endfor %}
+                  {% endfor %}
                 </ul>
               </li>
               {% endfor %}
