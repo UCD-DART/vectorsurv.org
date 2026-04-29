@@ -48,7 +48,7 @@
         - link: /docs/tick/pool-manage/
     - link: /docs/tick/calculator/
       docs:
-        - link: /docs/tools/v5/tick-anomaly/
+        - link: /docs/tools/v5/calculators/tick-anomaly/
 - title: Sentinel
   link: /docs/sentinel/sentinel-menu/
   docs:
@@ -121,7 +121,9 @@
     - link: /docs/tools/risk_surface_methodology/
     - link: /docs/tools/v5/v5-menu/
       docs:
-        - link: /docs/tools/v5/tick-anomaly/
+        - link: /docs/tools/v5/calculators/tick-anomaly/
+        - link: /docs/tools/v5/aggregate-reports/arthropod-pool-test-results/
+        - link: /docs/tools/v5/aggregate-reports/sentinel-sample-test-results/
 - title: Issues
   link: /docs/issues/
 - title: Settings

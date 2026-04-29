@@ -18,4 +18,3 @@ Quickly generate reports from your agency or from multiple agencies to compare a
 ### [Arthropod Pool Test Results]({{ site.baseurl }}/docs/tools/v5/aggregate-reports/arthropod-pool-test-results)
 
 ### [Sentinel Sample Test Results]({{ site.baseurl }}/docs/tools/v5/aggregate-reports/sentinel-sample-test-results)
-
