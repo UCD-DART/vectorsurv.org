@@ -8,7 +8,7 @@ v5: true
 
 Use this page to record and manage pesticide applications conducted by your agency.
 
-- **Source**: The location of the pesticide application (Point or Polygon).
+- **Source**: The location of the pesticide application (point or polygon).
   - **Existing Source**: Start typing a name or code in the input field to filter the dropdown list. New permanent sources can be added via the [New Source]({{ site.baseurl }}/docs/application/v5/source) page.
   - **One-time Source**: Use the drawing tools on the left side of the map to manually define a location. Once drawn, editing tools will appear to allow for precise adjustments.
   - **Recenter**: Click the blue **Recenter** icon ![Recenter Button]({{ site.baseurl }}/assets/images/docs/recenter-btn.png) in the lower right-hand corner of the map to pan the view to the current source.
