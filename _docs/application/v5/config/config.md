@@ -10,7 +10,7 @@ Configure settings for pesticide application pages to fit your agency’s specif
 
 Save equipment regularly used by your agency for the application of pesticides.
 
-- **[New Equipment]({{ site.baseurl }}/docs/application/v5/config/equipment)**
+- [New Equipment]({{ site.baseurl }}/docs/application/v5/config/equipment)
 - Manage Equipment
 
 ## Technicians
