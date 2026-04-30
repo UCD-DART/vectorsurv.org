@@ -122,8 +122,7 @@
     - link: /docs/tools/v5/v5-menu/
       docs:
         - link: /docs/tools/v5/calculators/tick-anomaly/
-        - link: /docs/tools/v5/aggregate-reports/arthropod-pool-test-results/
-        - link: /docs/tools/v5/aggregate-reports/sentinel-sample-test-results/
+        - link: /docs/tools/v5/aggregate-reports/aggregate-reports/
 - title: Issues
   link: /docs/issues/
 - title: Settings
