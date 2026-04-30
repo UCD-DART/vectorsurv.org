@@ -9,4 +9,10 @@ gateway-url: https://gateway.vectorsurv.org/v5/tools/calculators
 
 Use these calculators to estimate arbovirus risk.
 
-### [Tick Abundance Anomaly]({{ site.baseurl }}/docs/tools/v5/tick-anomaly)
+### [Tick Abundance Anomaly]({{ site.baseurl }}/docs/tools/v5/calculators/tick-anomaly)
+
+## Aggregate Reports
+
+Quickly generate reports from your agency or from multiple agencies to compare arbovirus activity.
+
+### [Aggregate Reports]({{ site.baseurl }}/docs/tools/v5/aggregate-reports/aggregate-reports)
