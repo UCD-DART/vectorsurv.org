@@ -1,6 +1,6 @@
 ---
 title: New Source
-gateway-url: https://gateway.vectorsurv.org/source/ppf/source
+gateway-url: https://gateway.vectorsurv.org/v5/application/source
 v5: true
 ---
 

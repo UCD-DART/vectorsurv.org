@@ -1,6 +1,6 @@
 ---
 title: New Application
-gateway-url: https://gateway.vectorsurv.org/application/ppf/application
+gateway-url: https://gateway.vectorsurv.org/v5/application/application
 v5: true
 ---
 
