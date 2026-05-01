@@ -6,7 +6,7 @@ v5: true
 
 # Source Configuration
 
-Sources allow you to bookmark locations that are regularly treated, saving time by eliminating the need to re-enter geographic information for every [new application]({{ site.baseurl }}/docs/application/application).
+Sources allow you to bookmark locations that are regularly treated, saving time by eliminating the need to re-enter geographic information for every [new application]({{ site.baseurl }}/docs/application/v5/application).
 
 - **Source Code**: A unique 10-digit numeric identifier for the source.
   - Codes must be unique within your agency.

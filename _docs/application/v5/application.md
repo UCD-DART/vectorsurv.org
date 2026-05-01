@@ -16,9 +16,9 @@ Use this page to record and manage pesticide applications conducted by your agen
   ![Source selection example]({{ site.baseurl }}/assets/images/docs/application-v5/source_input.PNG)
 
 - **Purpose**: The type of pesticide used or the intended target of the application (e.g., adulticide, herbicide, or larvicide).
-- **Technician**: The individual administering the application. New technicians can be managed through the [Technicians Configuration]({{ site.baseurl }}/docs/application/config) page.
-- **Equipment**: The equipment used for the application. The available options in this dropdown can be adjusted through the [Equipment Configuration]({{ site.baseurl }}/docs/application/config) page.
-- **Mix**: The pesticide mix used. The list of available mixes can be adjusted through the [Mix Configuration]({{ site.baseurl }}/docs/application/config) page.
+- **Technician**: The individual administering the application. New technicians can be managed through the [Technicians Configuration]({{ site.baseurl }}/docs/application/v5/config/config) page.
+- **Equipment**: The equipment used for the application. The available options in this dropdown can be adjusted through the [Equipment Configuration]({{ site.baseurl }}/docs/application/v5/config/config) page.
+- **Mix**: The pesticide mix used. The list of available mixes can be adjusted through the [Mix Configuration]({{ site.baseurl }}/docs/application/v5/config/config) page.
 - **Quantity**: The total amount of pesticide applied. Enter the numerical value in the first field and select the appropriate units in the second field.
 
   ![Application quantity input]({{ site.baseurl }}/assets/images/docs/application-v5/quantity_input.PNG)
