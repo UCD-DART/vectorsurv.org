@@ -15,6 +15,6 @@ Record pesticide applications by your agency.
 
 Similar to sites for arthropod records, use sources to mark regular locations for application treatments.
 
-### [Config]({{ site.baseurl }}/docs/application/v5/config)
+### [Config]({{ site.baseurl }}/docs/application/v5/config/config)
 
 Configure settings for pesticide application pages to fit your agency’s specifications.
