@@ -37,6 +37,7 @@ VectorSurv determines a single final result for each specimen and test target ba
 Mosquito pools may be tested multiple times using different methods. VectorSurv determines a final result for each pool and target:
 
 - RTPCR results take priority over all other methods
+- If multiple RTPCR results exist, the most recent RTPCR test result is used
 - If no RTPCR result exists, the most recent test result is used
 - Only the highest priority result is reflected in report outputs
 
