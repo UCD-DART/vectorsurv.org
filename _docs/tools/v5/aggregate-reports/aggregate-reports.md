@@ -6,6 +6,8 @@ gateway-url: https://gateway.vectorsurv.org/v5/tools/aggregate-reports
 
 Quickly generate reports from your agency or from multiple agencies to compare arbovirus activity.
 
+---
+
 ## Report Filters
 
 Use the filters below to define which data is included in the report.
@@ -22,17 +24,43 @@ Use the filters below to define which data is included in the report.
 
 - **Date Range (From / To) (required)**: Enter the start and end dates for the report. The report will include records within the specified date range.
 
+- **Year (required)**: Surveillance year for which to generate an ArboNET report.
+
+---
+
+## How Results are Determined
+
+VectorSurv determines a single final result for each specimen and test target based on test method priority and recency.
+
+### Arthropod Pools
+
+Mosquito pools may be tested multiple times using different methods. VectorSurv determines a final result for each pool and target:
+
+- RTPCR results take priority over all other methods
+- If multiple RTPCR results exist, the most recent RTPCR test result is used
+- If no RTPCR result exists, the most recent test result is used
+- Only the highest priority result is reflected in report outputs
+
+### Sentinel Samples
+
+VectorSurv determines a single final result per sample using ranked test methods. From highest to lowest priority:
+
+- PRNT (Plaque Reduction Neutralization Assay)
+- WB (Western Blot)
+- IFA (Indirect Immunofluorescence Assay)
+- MAC-EIA (IgM capture EIA)
+- EIA (Enzyme Linked Immunoassay)
+- HI (Haemagglutination Inhibition)
+
+The highest priority available result is used in report outputs.
+
 ---
 
 ## Arthropod Pool Test Results
 
-Summarizes mosquito pool testing results by test target (e.g., WNV, SLE).
+Summarizes mosquito pool testing results by test target (e.g., WNV, SLEV).
 
-Mosquito pools may be tested multiple times using different methods. VectorSurv applies an internal ranking of test methods to determine the final result for each pool and target.
-
-- RTPCR results take priority over all other methods
-- If multiple non-RTPCR tests exist, the most recent test is used
-- Only the highest priority result is reflected in the report output.
+Final results for each pool and target are determined is described in **How Results are Determined**.
 
 ### Tables
 
@@ -82,16 +110,7 @@ Mosquito pools may be tested multiple times using different methods. VectorSurv 
 
 Summarizes sentinel chicken testing results by test target (e.g., WNV, SLE).
 
-### Result Prioritization
-
-VectorSurv determines a single final result per sample using ranked test methods.
-
-- PRNT (Plaque Reduction Neutralization Assay) (highest priority)
-- WB (Western Blot)
-- IFA (Indirect Immunofluorescence Assay)
-- EIA (Enzyme Linked Immunoassay)
-
-Only the highest priority result is reflected in the report output.
+Final results for each sample and target are determined as described in **How Results are Determined**.
 
 ### Tables
 
@@ -128,4 +147,55 @@ Only the highest priority result is reflected in the report output.
 
 ---
 
-> **Quick Tip:** If you need to review this documentation just click the help icon located in the title bar. ![Help Icon]({{ site.baseurl }}/assets/images/docs/help-icon.PNG)
+## ArboNET Export
+
+Use this report to export files for submission to CDC’s ArboNET reporting. The export includes any data that exist in the system for mosquito pools, sentinel chickens, and dead bird surveillance.
+
+---
+
+Clicking the generated link downloads a ZIP file containing a README.md file plus up to four XML files. Each file represents a different type of surveillance data.
+
+- **Numerator.xml**: Contains confirmed positive cases
+  - Each record represents a confirmed positive result for a specific target
+  - Only confirmed positive records are included in the Numerator file
+  - Results are determined as described in **How Results are Determined**
+
+- **Denominator.xml**: Contains testing and reporting totals
+  - Includes counts such as number of specimens collected and tested
+  - Data is grouped by time period, location, and target
+
+- **Preseason.xml**: Used to indicate planned surveillance activities
+  - This file is meant to be updated by the user to indicate whether mosquito collection and testing were planned in the season. Please refer to the README file for more information
+
+- **Postseason.xml**: Indicates completed surveillance activities
+  - Includes whether mosquito collection and testing were completed based on data in the system. Please refer to the README file for more information
+
+Only files with data are included in the ZIP export.
+
+---
+
+## ArboNET Tick Export
+
+Use this report to export tick surveillance and pathogen testing data for submission to CDC’s ArboNET Tick system.
+
+---
+
+Clicking the generated link downloads an Excel workbook (.xlsx) with four sheets.
+
+- **Tick Surveillance**: Contains tick collection data
+  - Each row represents a collection event and species combination
+  - Includes location, habitat, collection method, and counts by life stage
+  - Certain passive collection methods are excluded because they are not compatible with CDC reporting requirements
+
+- **Tickborne Pathogens**: Contains pathogen testing results
+  - Includes both individual ticks and pooled samples
+  - Reports total tested, positive, and inconclusive counts
+  - Positive status is determined using the system’s standard test result logic (see **How Results are Determined**)
+
+- **Invalid Surveillance**: Contains collection records that could not be included
+  - Records appear here when count types are incompatible with CDC requirements (such as presence-only or non-numeric counts)
+
+- **Invalid Pathogens**: Contains pathogen test records that could not be included
+  - Records appear here when:
+    - There is no matching surveillance record for the same site and collection
+    - The associated surveillance record has invalid count data
