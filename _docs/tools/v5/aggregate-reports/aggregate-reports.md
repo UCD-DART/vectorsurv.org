@@ -57,7 +57,7 @@ The highest priority available result is used in report outputs.
 
 ## Arthropod Pool Test Results
 
-Summarizes mosquito pool testing results by test target (e.g., WNV, SLE).
+Summarizes mosquito pool testing results by test target (e.g., WNV, SLEV).
 
 Final results for each pool and target are determined is described in **How Results are Determined**.
 
