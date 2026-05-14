@@ -34,7 +34,7 @@ VectorSurv determines a single final result for each specimen and test target ba
 
 ### Arthropod Pools
 
-Mosquito pools may be tested multiple times using different methods. VectorSurv determines a final result for each pool and target using the following rules:
+Mosquito pools may be tested multiple times using different methods. VectorSurv determines a final result for each pool and target:
 
 - RTPCR results take priority over all other methods
 - If no RTPCR result exists, the most recent test is used
@@ -42,9 +42,7 @@ Mosquito pools may be tested multiple times using different methods. VectorSurv 
 
 ### Sentinel Samples
 
-Sentinel samples may also have multiple test results. A final result is determined using ranked test methods.
-
-From highest to lowest priority:
+VectorSurv determines a single final result per sample using ranked test methods. From highest to lowest priority:
 
 - PRNT (Plaque Reduction Neutralization Assay)
 - WB (Western Blot)
@@ -61,7 +59,7 @@ The highest priority available result is used in report outputs.
 
 Summarizes mosquito pool testing results by test target (e.g., WNV, SLE).
 
-Final results for each pool and target are determined using the rules described in **How Results are Determined**.
+Final results for each pool and target are determined is described in **How Results are Determined**.
 
 ### Tables
 
@@ -111,7 +109,7 @@ Final results for each pool and target are determined using the rules described 
 
 Summarizes sentinel chicken testing results by test target (e.g., WNV, SLE).
 
-Final results for each sample and target are determined using the rules described in **How Results are Determined**.
+Final results for each sample and target are determined as described in **How Results are Determined**.
 
 ### Tables
 
@@ -159,7 +157,7 @@ Clicking the generated link downloads a ZIP file containing a README.md file plu
 - **Numerator.xml**: Contains confirmed positive cases
   - Each record represents a confirmed positive result for a specific target
   - Only confirmed positive records are included in the Numerator file
-  - Results are determined using the rules described in **How Results are Determined**
+  - Results are determined as described in **How Results are Determined**
 
 - **Denominator.xml**: Contains testing and reporting totals
   - Includes counts such as number of specimens collected and tested
