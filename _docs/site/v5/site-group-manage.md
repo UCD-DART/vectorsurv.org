@@ -6,11 +6,9 @@ gateway-url: https://gateway.vectorsurv.org/v5/site/group/manage
 
 View and manage saved site groups.
 
----
-
 ## Site Group Management Table
 
-The table lists all of your agency's site groups available to you.
+The table lists the site groups that are available to you in your current agency.
 
 ### Table Features
 
@@ -20,6 +18,6 @@ The table lists all of your agency's site groups available to you.
 
 ### Action Buttons
 
-![Pencil icon](/assets/images/docs/action-button-edit.png): Clicking the edit button opens the selected site group where you can modify its details and member sites.
+![Pencil icon](/assets/images/docs/action-button-edit.png): Clicking the edit button opens the selected site group where you can view or modify its details and member sites, depending on your permissions.
 
-![Red trash can icon](/assets/images/docs/action-button-delete.png): Delete the selected site group.
+![Red trash can icon](/assets/images/docs/action-button-delete.png): Delete the selected site group. This option is only available to users with permission to delete site groups.

@@ -6,8 +6,6 @@ gateway-url: https://gateway.vectorsurv.org/v5/site/group/group
 
 Create and manage reusable groups of sites. Site groups make it easier to select commonly used sets of sites when running calculators and other VectorSurv workflows.
 
----
-
 ## Group Details
 
 Provide the following information when creating or editing a site group.
@@ -18,12 +16,22 @@ Provide the following information when creating or editing a site group.
 
 ---
 
+## Agency Selection
+
+Users with access to multiple agencies can choose which agencies' sites are available for selection.
+
+- Select one or more agencies from the agency list.
+- Click **Update Site List** to load sites from the selected agencies.
+- Sites that are already part of the site group remain selected even if their agency is no longer included in the current agency selection.
+
+---
+
 ## Site Tables
 
-Use the **Selected Sites** and **Available Sites** tables to manage which sites belong to the group.
+Use the **Selected Sites** and **Unselected Sites** tables to manage which sites belong to the group.
 
 - **Selected Sites**: Displays the sites currently included in the group.
-- **Available Sites**: Displays sites that are not currently included in the group.
+- **Unselected Sites**: Displays sites that are not currently included in the group.
 
 ### Table Features
 
@@ -31,7 +39,7 @@ Use the **Selected Sites** and **Available Sites** tables to manage which sites 
 - **Sorting**: Click a column header to sort the table.
 - **Filtering**: Use the search box to filter sites by code, name, or other displayed values.
 - **Pagination**: Navigate between pages when more sites are available than can be displayed at once.
-- **Show Prior Revisions of Site Codes**: Displays deactivated site revisions that are normally hidden from the Available Sites table.
+- **Show Prior Revisions of Site Codes**: Displays deactivated site revisions that are normally hidden from the Unselected Sites table.
 
 Sites may be added or removed using the table action buttons or directly from the map.
 
