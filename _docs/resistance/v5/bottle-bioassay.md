@@ -8,10 +8,10 @@ Use this page to import new bottle bioassay results into VectorSurv.
 
 ## Bottle Bioassay Details
 
-- **Test Date** (required): The date this bottle bioassay test was conducted. Date format is based on the settings under [Account Preferences]({{ site.baseur1 }}/docs/settings/account-preferences).
+- **Test Date** (required): The date this bottle bioassay test was conducted. Date format is based on the settings under [Account Preferences]({{ site.baseurl }}/docs/settings/account-preferences).
   - **Include time?**: Toggle this switch to include the test start time. When enabled:
     - **Test Start Time**: Enter the specific time the test began
-    - **Timezone**: Select the timezone for the test time. Click the timezone link to change if needed. Default timezone is based on the settings under [Account Preferences]({{ site.baseur1 }}/docs/settings/account-preferences)
+    - **Timezone**: Select the timezone for the test time. Click the timezone link to change if needed. Default timezone is based on the settings under [Account Preferences]({{ site.baseurl }}/docs/settings/account-preferences)
 - **Tested By**: The name of the person who conducted this bottle bioassay test.
 - **Name**: Give this bottle bioassay an optional custom name. If no custom name is provided, tests will be labeled using this format: `Population Name(s) - Species – Ingredient + Dose(s) – Date` (Date format set through [user preferences]({{ site.baseurl }}/docs/settings/account-preferences/))
   - ex: "CSUF - Cx. pipiens s.l. – Pyrethrum 15ug, PBO 400ug – 07/02/2024"
