@@ -103,6 +103,8 @@
     - link: /docs/resistance/v5/v5-menu/
       docs:
         - link: /docs/resistance/v5/bottle-bioassay/
+        - link: /docs/resistance/v5/bottle-bioassay-manage/
+        - link: /docs/resistance/v5/susceptible-colony/
         - link: /docs/resistance/v5/bioassay-calculator/
 - title: Service Visit
   link: /docs/service-visit/service-visit-menu/

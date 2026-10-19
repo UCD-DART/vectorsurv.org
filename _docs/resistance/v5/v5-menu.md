@@ -15,6 +15,10 @@ Enter bottle bioassay test results.
 
 View and edit saved bottle bioassay records.
 
-### [Bottle Bioassay Calculator]({{ site.baseurl }}/docs/resistance/bioassay-calculator)
+### [Susceptible Colonies]({{ site.baseurl }}/docs/resistance/v5/susceptible-colony)
+
+View and edit agency susceptible colonies.
+
+### [Bottle Bioassay Calculator]({{ site.baseurl }}/docs/resistance/v5/bioassay-calculator)
 
 Estimate survival curves from bottle bioassay results
