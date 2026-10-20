@@ -4,7 +4,7 @@ v5: true
 gateway-url: https://gateway.vectorsurv.org/v5/resistance/bottle-bioassay/manage
 ---
 
-View and manage saved bottle bioassay records.
+View and manage bottle bioassay records.
 
 ## Filtering Bioassays
 
