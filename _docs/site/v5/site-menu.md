@@ -11,10 +11,18 @@ Sites are essentially bookmarks for trap locations. They will help you quickly r
 
 Create a new site to quickly record surveillance events.
 
-### [Manage Sites]({{ site.baseurl }}/docs/site/v5/site_manage)
+### [Manage Sites]({{ site.baseurl }}/docs/site/v5/site-manage)
 
 View and edit saved sites.
 
 ### [Walkthroughs]({{ site.baseurl }}/docs/site/v5/walkthroughs)
 
 Walkthroughs of common tasks when using the site form.
+
+### [New Site Group]({{ site.baseurl }}/docs/site/v5/site-group)
+
+Create a new site group.
+
+### [Manage Site Groups]({{ site.baseurl }}/docs/site/v5/site-group-manage)
+
+View and edit saved site groups.
