@@ -17,7 +17,7 @@ Create and edit susceptible mosquito colonies for use in bottle bioassays. Exist
 
 ## Location
 
-Location information is optional. Use **Spatial Type** to specify how the colony's location is recorded.
+Location information is optional. Use **Spatial Type** to specify how the colony's source location is recorded.
 
 - **Site**: Select an existing site to use its location information.
 - **One-off Location**: Enter a location directly using the map.
