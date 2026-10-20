@@ -21,7 +21,7 @@ Location information is optional. Use **Spatial Type** to specify how the colony
 
 - **Site**: Select an existing site to use its location information.
 - **One-off Location**: Enter a location directly using the map.
-- **Unknown**: Leave the colony's location unspecified.
+- **Unknown**: Leave the colony's source location unspecified.
 
 ### Site
 
