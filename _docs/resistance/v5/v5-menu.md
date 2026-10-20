@@ -1,6 +1,6 @@
 ---
 menu_name: Bottle Bioassays
-title: Resistance
+title: Bottle Bioassays
 v5: true
 gateway-url: https://gateway.vectorsurv.org/v5/resistance/
 ---
