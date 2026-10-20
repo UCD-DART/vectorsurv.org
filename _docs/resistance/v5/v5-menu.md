@@ -1,5 +1,5 @@
 ---
-menu_name: Resistance Forms in v5
+menu_name: Bottle Bioassays
 title: Resistance
 v5: true
 gateway-url: https://gateway.vectorsurv.org/v5/resistance/
