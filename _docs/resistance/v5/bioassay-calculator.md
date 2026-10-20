@@ -8,7 +8,7 @@ Use this calculator to estimate survival curves and knockdown times (KD50 and KD
 
 ## Available Tests
 
-The **Available Tests** table displays bottle bioassays from your current agency, along with eligible colony tests from other agencies in your state. By default, tests are sorted by date (most recent first), then by ID (highest first).
+The **Available Tests** table displays bottle bioassays from your current agency, along with susceptible colony tests from other agencies in your state. By default, tests are sorted by date (most recent first), then by ID (highest first).
 
 Each test row displays:
 
