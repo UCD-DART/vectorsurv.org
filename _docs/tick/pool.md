@@ -47,7 +47,7 @@ One or the other should be used to submit a single pool.
   toggle in the Map section.
 
 - **Precision**: Used to specify the level of certainty in the site
-  coordinate. In most cases, this field should be kept as Exact. For
+  coordinates. In most cases, this field should be kept as Exact. For
   historical data, instances where the exact location is uncertain or
   in instances where the exact location need to be obscured due to
   human case privacy concerns, the user may choose the most accurate
@@ -57,7 +57,6 @@ One or the other should be used to submit a single pool.
   give a view of the site area. Once a site is selected, the trap can
   be dragged to a new location up to 400m away indicated by the
   circle.
-
   - **Zero Site Code**: Collections using the Zero Code will have no
     buffer zone and can be placed anywhere on the map. You can read
     more about Zero Site Codes in the [Site
@@ -104,7 +103,6 @@ One or the other should be used to submit a single pool.
 
 - **Linked Collection**: Click the blue link button to get a list of
   collections eligible for linking.
-
   - **Action Buttons:**  
     ![Link icon](/assets/images/docs/action-button-link.png): Link the pool to the selected collection. The pool's **collection date**, **site** and **trap**
     values will be overwritten by those of the selected collection. You
@@ -117,7 +115,6 @@ One or the other should be used to submit a single pool.
     Opens subtable to view species details.
 
 - **Generating New Pools:** These fields only appear when generating new pools.
-
   - **Total Count:** The total number of specimens in this
     pool/across all pools (if generating batches of more than one pool). Minimum of 1.
 
@@ -126,7 +123,6 @@ One or the other should be used to submit a single pool.
   - **\# of Pools:** View-only field. The number of pools to be generated.
 
 - **Updating a single pool:**
-
   - **Count:** The total number of specimens in this pool. Minimum of 1.
 
 ---
@@ -136,7 +132,6 @@ One or the other should be used to submit a single pool.
 **Filter By:**
 
 - **Date** lets you select a custom timeframe to search for records.
-
   - Select the timeframe for which you wish to view collections by
     choosing the appropriate values using the start and end
     datepickers. You can type a date value in the format set under

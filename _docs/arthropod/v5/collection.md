@@ -75,7 +75,6 @@ collection date needs to be selected before you can choose a trap site.
   give a view of the site area. Once a site is selected, the trap can
   be dragged to a new location up to 400m away indicated by the
   circle.
-
   - **Zero Site Code**: Collections using the Zero Code will have no
     buffer zone and can be placed anywhere on the map. You can read
     more about Zero Site Codes in the [Site
@@ -104,7 +103,7 @@ collection date needs to be selected before you can choose a trap site.
   degrees.
 
 - **Precision:** Used to specify the level of certainty in the site
-  coordinate. In most cases, this field should be kept as Exact. For
+  coordinates. In most cases, this field should be kept as Exact. For
   historical data, instances where the exact location is uncertain or
   in instances where the exact location need to be obscured due to
   human case privacy concerns, the user may choose the most accurate
@@ -174,7 +173,6 @@ Note: Edits made using either style of input are not saved until the Save Collec
 ![Species Form Input](/assets/images/docs/new_collection_species_form.png)
 
 - **Fields**
-
   - **Species**: The species that make up this abundance. Start typing
     to filter the list. The list of species in the dropdown can be
     adjusted through the Available Species settings on the [arthropod
@@ -204,7 +202,6 @@ Note: Edits made using either style of input are not saved until the Save Collec
   tick abundance.
 
 - **Totals**:
-
   - Total females: Total number of female specimen across all abundances
     in the table.
 
@@ -250,7 +247,6 @@ existing pools linked to this collection.
 - **Comments:** Any accompanying comments.
 
 - **Generating New Pools:** These fields only appear when generating new pools. Pools to be generated will appear in the New Pools table. They are not permanently saved until the Save/Update Collection button has been clicked.
-
   - **Total Count:** The total number of specimens in this
     pool/across all pools (if generating batches of more than one pool). Minimum of 1. After selecting a species and sex/condition combination, the field will autopopulate with counts from abundances provided in the Species Card, if available.
 
@@ -261,7 +257,6 @@ existing pools linked to this collection.
   - **Add New Pool(s):** You must first click this button to generate new temporary pools you can view and edit. Once the temporary pools are generated, you must click Save/Update Collection to save them permanently, after which they will appear in the Linked Pools table.
 
 - **Updating a single pool:**
-
   - **Count:** The total number of specimens in this pool. Minimum of 1.
   <!-- invisible character to create shortcut without making it a header -->
 
@@ -313,7 +308,6 @@ red of what it was positive for.
   ![Red trash can icon](/assets/images/docs/action-button-delete.png): Delete the selected pool.
 
 - Totals:
-
   - Total Count: Total number of specimen across all pools in the table.
 
   - Total Pools: Total number of pools linked to the collection.
