@@ -20,7 +20,6 @@ Preferences]({{ site.baseurl }}/docs/settings/account-preferences).
   the collection was set and collected on different days. You should
   see two collection date inputs, one for the start date and one for
   the end date.
-
   - **Collection Date** or **Collection End Date**: The date the
     trap was picked up / last day of the collection. You can type a
     date value in the format set under [Account
@@ -39,7 +38,6 @@ Preferences]({{ site.baseurl }}/docs/settings/account-preferences).
 
 - **Date Only**: Leave this toggle off if you have start and end times
   to log. Turn it on if you only have dates.
-
   - **Start time**: You can type specific times or use the dropdown
     select to pick times by 15 minute increments.
 
@@ -64,7 +62,6 @@ collection date needs to be selected before you can choose a trap site.
   give a view of the site area. Once a site is selected, the trap can
   be dragged to a new location up to 400m away indicated by the
   circle.
-
   - **Zero Site Code**: Collections using the Zero Code will have no
     buffer zone and can be placed anywhere on the map. You can read
     more about Zero Site Codes in the [Site
@@ -93,7 +90,7 @@ collection date needs to be selected before you can choose a trap site.
   degrees.
 
 - **Precision:** Used to specify the level of certainty in the site
-  coordinate. In most cases, this field should be kept as Exact. For
+  coordinates. In most cases, this field should be kept as Exact. For
   historical data, instances where the exact location is uncertain or
   in instances where the exact location need to be obscured due to
   human case privacy concerns, the user may choose the most accurate
@@ -109,7 +106,6 @@ collection date needs to be selected before you can choose a trap site.
   type.
 
 - **Density Sampling Method**: Available for certain methods.
-
   - _Distance_: Displays area input
 
   - _Time_: Displays duration input
@@ -249,7 +245,6 @@ existing pools linked to this collection.
 - **Comments:** Any accompanying comments.
 
 - **Generating New Pools:** These fields only appear when generating new pools. Pools to be generated will appear in the New Pools table. They are not permanently saved until the Save/Update Collection button has been clicked.
-
   - **Total Count:** The total number of specimens in this
     pool/across all pools (if generating batches of more than one pool). Minimum of 1. After selecting a species and sex/condition combination, the field will autopopulate with counts from abundances provided in the Species Card, if available.
 
@@ -260,7 +255,6 @@ existing pools linked to this collection.
   - **Add New Pool(s):** You must first click this button to generate new temporary pools you can view and edit. Once the temporary pools are generated, you must click Save/Update Collection to save them permanently, after which they will appear in the Linked Pools table.
 
 - **Updating a single pool:**
-
   - **Count:** The total number of specimens in this pool. Minimum of 1.
 
 **New Pools**
@@ -312,7 +306,6 @@ red of what it was positive for.
   ![Red trash can icon](/assets/images/docs/action-button-delete.png): Delete the selected pool.
 
 - **Totals:**
-
   - Total Count: Total number of specimen across all pools in the table.
 
   - Total Pools: Total number of pools linked to the collection.

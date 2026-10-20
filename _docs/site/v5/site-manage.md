@@ -13,7 +13,6 @@ View saved site records.
 - **All** retrieves all records.
 
 - **Date** lets you select a custom timeframe to search for records.
-
   - Select the timeframe for which you wish to view sites by
     choosing the appropriate values using the start and end
     datepickers. You can type a date value in the format set under
@@ -24,7 +23,7 @@ View saved site records.
     disease week number will autopopulate the start/end inputs with
     the appropriate values for that disease week.
 
-The table is sorted by site code, deactive date then id, but you can sort the table by any field by clicking on
+The table is initially sorted by site code, then by deactive date, but you can sort the table by any field by clicking on
 the column name.
 
 Beneath the table, you can navigate between pages using the
@@ -33,7 +32,7 @@ many sites to display on a single page using the
 **Items/page** dropdown option.
 
 You can also use the search box on the right to filter results by site
-code, site ID or other keywords. Clicking the X button will remove
+code, site name, or other keywords. Clicking the X button will remove
 the search filter and display the entire table.
 
 **Action Buttons:**
