@@ -26,3 +26,7 @@ Create a new site group.
 ### [Manage Site Groups]({{ site.baseurl }}/docs/site/v5/site-group-manage)
 
 View and edit saved site groups.
+
+### [Population Classification]({{ site.baseurl }}/docs/site/v5/population-classification)
+
+Assign population classifications to multiple sites at once.
