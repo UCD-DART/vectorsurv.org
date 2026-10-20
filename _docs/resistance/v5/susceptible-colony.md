@@ -36,7 +36,7 @@ Use the map to draw the colony's source location or enter latitude and longitude
 - **Latitude / Longitude**: Enter coordinates for a point location. Must present as a pair.
 - **Precision**: Used to specify the level of certainty in the colony coordinates.
 
-The map supports point orpolygon locations.
+The map supports point or polygon locations.
 
 ---
 
