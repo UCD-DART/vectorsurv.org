@@ -31,7 +31,7 @@ Selecting a site copies its location, shape, and coordinate precision into the c
 
 ### One-off Location
 
-Use the map to draw the colony's location or enter latitude and longitude coordinates.
+Use the map to draw the colony's source location or enter latitude and longitude coordinates.
 
 - **Latitude / Longitude**: Enter coordinates for a point location. Must present as a pair.
 - **Precision**: Used to specify the level of certainty in the colony coordinates.
