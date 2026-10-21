@@ -121,9 +121,9 @@ You must keep at least one time point. A new time cannot be inserted between con
 The form offers multiple save options via the save button dropdown. Your last-used save option is remembered for future submissions.
 
 - **Save**: Saves the bioassay and opens the saved record in the form.
-- **Save & Add: New**: Saves the bioassay and prepares a new entry, retaining the test date, **Include time?** setting, and tester.
-- **Save & Add: Same Ingredients**: Saves the bioassay and prepares a new entry, retaining test date, **Include time?** setting, tester, ingredients, and comments values. Use when testing the same materials on different mosquito populations.
-- **Save & Add: Same Sources**: Saves the bioassay and prepares a new entry, retaining test date, **Include time?** setting, tester, species, mosquito source type, sources, generation, and comments values. Use when testing different materials on the same mosquito population.
+- **Save & Add: New**: Saves the bioassay and prepares a new entry, retaining tester and test date settings.
+- **Save & Add: Same Ingredients**: Saves the bioassay and prepares a new entry, retaining tester, ingredients, comments, and test date settings. Use when testing the same materials on different mosquito populations.
+- **Save & Add: Same Sources**: Saves the bioassay and prepares a new entry, retaining tester, species, mosquito source type, sources, generation, comments, and test date settings. Use when testing different materials on the same mosquito population.
 
 All **Save & Add** options retain the bottle structure and observation times and clear bottle counts and survival results.
 
