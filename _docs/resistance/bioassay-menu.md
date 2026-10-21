@@ -8,7 +8,7 @@ Bottle Bioassay menu
 
 Import new bottle biassay results
 
-### [Manage Bottle Bioassays]({{ site.baseurl }}/docs/resistance/bioassay-manage)
+### [Bottle Bioassay Management]({{ site.baseurl }}/docs/resistance/bioassay-manage)
 
 View and edit saved bottle bioassays
 
