@@ -14,7 +14,7 @@ Each test row displays:
 
 - **ID**: Test identifier. If you have permission to view this test, ID is a clickable link that opens the test details in a new tab.
 - **Agency**: The code for the agency the test belongs to.
-- **Name**: Test name, if provided.
+- **Name**: Test name
 - **Date**: Test date in your preferred format.
 - **Species**: Mosquito species tested.
 - **Source Type**: Whether the mosquitoes were field-collected or from a colony.
