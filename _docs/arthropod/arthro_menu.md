@@ -4,9 +4,7 @@ GUI-url: https://gateway.vectorsurv.org/v5/mosquito
 gateway-url: https://gateway.vectorsurv.org/core/ppf/menu/path/38
 ---
 
-## Arthopod menu
-
-### [Arthro Forms in v5]({{ site.baseurl }}/docs/arthropod/v5/v5-menu)
+### [Arthropod Forms in v5]({{ site.baseurl }}/docs/arthropod/v5/v5-menu)
 
 View documentation for v5 version of forms.
 
