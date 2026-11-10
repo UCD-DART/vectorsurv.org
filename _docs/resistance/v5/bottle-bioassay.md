@@ -92,7 +92,11 @@ The default bottle count and time-series preset controls are available when crea
 #### Bottle Columns
 
 - **Replicate Bottles**: Bottles containing the tested ingredients. Click **+** to add a bottle or **X** to remove one.
-- **Control Bottles**: Bottles used as controls. Click **+** to add a bottle and choose **Acetone** or **Synergist** as the control type. Use the pencil icon to change an existing control's type or **X** to remove the bottle.
+- **Control Bottles**: Bottles used as controls. Click **+** to add a control bottle. Then either:
+  - **Create a new control bottle**: Select **Acetone** or **Synergist** and enter the control bottle's observations.
+  - **Select an existing control bottle**: Link a control bottle from another bioassay with a similar test date. Available controls are identified by test date, control type, total number tested, and species.
+
+  Click **X** to remove a control bottle.
 
 A bottle bioassay requires at least one replicate and one control.
 
