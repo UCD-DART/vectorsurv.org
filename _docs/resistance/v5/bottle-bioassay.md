@@ -56,7 +56,7 @@ Use **Diagnostic Time** to specify how the diagnostic time for the bioassay is d
 
 - **CDC Diagnostic Time**: Enter the CDC recommended diagnostic time in minutes. If provided, the value must match one of the observation times in the bottles table.
 - **Linked Colony Test**: Select an eligible susceptible colony test to use its calculated diagnostic time. Available tests are based on the current species, test date, and ingredients and doses, which must be present before another test can be linked.
-- **Diagnostic**: For colony tests, this option will calculate and save the first time value at which all replicates achieve 100% mortality. For field tests, this value may provided to indicate that the diagnostic time has no linked source. If provided, the value must match one of the observation times in the bottles table. If no value is provided for this option, the diagnostic time will be calculated from the bottle results.
+- **Custom Diagnostic**: For colony tests, this option will calculate and save the first time value at which all replicates achieve 100% mortality. For field tests, this value may be provided to indicate that the diagnostic time has no linked source. If provided, the value must match one of the observation times in the bottles table.
 - **Control Mortality**: _Legacy data only._ When editing an older record that contains a manually entered control mortality percentage, that value can be viewed or updated. For new records, control mortality is calculated from the control bottles.
 
 ## Bottles and Mortality Data
