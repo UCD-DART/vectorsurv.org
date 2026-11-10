@@ -52,7 +52,7 @@ At least one source is required.
 
 ## Calculation Details
 
-Use **Diagnostic Time** to specify how the diagnostic time for the bioassay is determined.
+Use **Diagnostic Time** (required) to specify how the diagnostic time for the bioassay is determined.
 
 - **CDC Diagnostic Time**: Enter the CDC recommended diagnostic time in minutes. If provided, the value must match one of the observation times in the bottles table.
 - **Linked Colony Test**: Select an eligible susceptible colony test to use its calculated diagnostic time. Available tests are based on the current species, test date, and ingredients and doses, which must be present before another test can be linked.
