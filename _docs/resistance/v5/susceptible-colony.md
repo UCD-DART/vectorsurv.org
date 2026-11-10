@@ -10,7 +10,7 @@ Create and edit susceptible mosquito colonies for use in bottle bioassays. Exist
 
 - **Name (required)**: Colony name.
 - **Species (required)**: Mosquito species raised.
-- **Year (required)**: The year the colony was established.
+- **Year Established (required)**: The year the colony was established.
 - **Shareable with all agencies in state**: Allows users in other agencies within your state to select the colony for their bottle bioassays. Each shared colony in a state must have a unique name.
 
 ---
@@ -40,6 +40,17 @@ The map supports point or polygon locations.
 
 ---
 
+## Saving Changes
+
+Click **Save** to create a new colony.
+
+When editing an existing colony, click **Update** to save your changes.
+
+- **Clear form**: Clears the form and starts a new colony entry.
+- **Reset**: Discards unsaved changes and restores the form to its previous state.
+
+---
+
 ## Manage Colonies
 
 The **Manage Colonies** table lists your colonies and your agency's shared colonies.
@@ -54,17 +65,6 @@ The **Manage Colonies** table lists your colonies and your agency's shared colon
 ![Pencil icon](/assets/images/docs/action-button-edit.png): Open the selected colony in the form above to view or modify its details.
 
 ![Red trash can icon](/assets/images/docs/action-button-delete.png): Delete the colony.
-
----
-
-## Saving Changes
-
-Click **Save** to create a new colony.
-
-When editing an existing colony, click **Update** to save your changes.
-
-- **Clear form**: Clears the form and starts a new colony entry.
-- **Reset**: Discards unsaved changes and restores the form to its previous state.
 
 ---
 
