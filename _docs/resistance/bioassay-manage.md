@@ -1,5 +1,5 @@
 ---
-title: Bottle Bioassays
+title: Bottle Bioassay Management
 gateway-url: https://gateway.vectorsurv.org/resistance/ppf/bottle_manage
 ---
 View and edit saved bottle bioassays.

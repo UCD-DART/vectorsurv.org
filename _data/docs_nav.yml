@@ -95,11 +95,12 @@
       docs:
         - link: /docs/resistance/larval/
         - link: /docs/resistance/larval-manage/
-    - link: /docs/resistance/bioassay-menu/
+    - link: /docs/resistance/v5/v5-menu/
       docs:
-        - link: /docs/resistance/bottle-bioassay/
-        - link: /docs/resistance/bioassay-manage/
-        - link: /docs/resistance/bioassay-calculator/
+        - link: /docs/resistance/v5/bottle-bioassay/
+        - link: /docs/resistance/v5/bottle-bioassay-manage/
+        - link: /docs/tools/v5/calculators/bioassay-calculator/
+    - link: /docs/resistance/v5/susceptible-colony/
 - title: Service Visit
   link: /docs/service-visit/service-visit-menu/
   docs:
@@ -120,12 +121,11 @@
         - link: /docs/tools/calculators/infection-rate/
         - link: /docs/tools/calculators/risk-assessment/
         - link: /docs/tools/calculators/vector-index/
-    - link: /docs/tools/spatial-tools/
-    - link: /docs/tools/risk_surface_methodology/
-    - link: /docs/tools/v5/v5-menu/
-      docs:
         - link: /docs/tools/v5/calculators/tick-anomaly/
-        - link: /docs/tools/v5/aggregate-reports/aggregate-reports/
+        - link: /docs/tools/v5/calculators/bioassay-calculator/
+    - link: /docs/tools/spatial-tools/
+    - link: /docs/tools/v5/aggregate-reports/aggregate-reports/
+    - link: /docs/tools/risk_surface_methodology/
 - title: Issues
   link: /docs/issues/
 - title: Settings
