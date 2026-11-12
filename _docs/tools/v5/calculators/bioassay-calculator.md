@@ -127,7 +127,7 @@ Tests are labeled using their names or a description based on their sources, spe
 
 ### Graph Options
 
-- **Corrected**: Display Abbott-adjusted mortality values where available. Perhaps this is where Abbott's correction could be further explained.
+- **Corrected**: Display Abbott-adjusted mortality values where available.
 - **Uncorrected**: Display mortality values without Abbott's correction.
 - **Toggle Lines**: Click legend entries to show or hide individual test curves.
 - **Download Screenshot**: Download the displayed graph as a PNG image.
